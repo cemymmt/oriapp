@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :students
-  root 'unilists#index'
+  get 'uni' => 'unis#index'
+  get 'uni/:id' => 'unis#select_options'
 
 end

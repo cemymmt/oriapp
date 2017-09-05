@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
- get 'unilists' => 'unilists#index'
+  devise_for :students
+  root 'unilists#index'
+
 end

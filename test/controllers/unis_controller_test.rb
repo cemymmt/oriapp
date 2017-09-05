@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class UnilistsControllerTest < ActionDispatch::IntegrationTest
+class UnisControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

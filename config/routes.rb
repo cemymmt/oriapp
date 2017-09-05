@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :students
   get 'uni' => 'unis#index'
-  get 'uni/:id' => 'unis#select_options'
+  get 'unis/:id' => 'unis#select_options'
+  get 'catalog' => 'products#kimono_list'
+
 
 end

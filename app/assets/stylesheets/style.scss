@@ -1,0 +1,145 @@
+.title-box {
+  background: rgba(255, 255, 255, 0);
+  border-bottom: 1px solid rgba(219, 219, 219, 0);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 101;
+  width: 100%;
+  height: 100px;
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.introduction {
+    background-image:
+    url(http://free-photos-ls02.gatag.net/images/lgf01a201403022300.jpg);
+}
+
+.introduction{
+    position: relative;
+    height: 550px;
+    z-index: 1;
+    background-color: #333;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.introduction
+.overlay{
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-30%);
+}
+
+.introduction
+.overlay h1{
+    color: #fff;
+    text-align: center;
+}
+
+.introduction
+.overlay
+.button-wrap{
+  text-align: center;
+}
+
+.button-wrap
+.button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  height:35px;
+  width: 120px;
+  line-height: 37px;
+  text-align: center;
+  color: #2bb6c1;
+  border:solid 1px #2bb6c1;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+  margin: 0 auto;
+}
+.button:hover {
+  background: #2bb6c1;
+  color: #fff;
+}
+
+.featured-title {
+  text-align: center;
+}
+.whatwedo{
+  margin: 30px auto;
+  color: #555;
+}
+
+.explanation1 {
+  color: #666;
+}
+
+.explanation2 {
+  color: #666;
+}
+
+.box1 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    display: block;
+    height: 300px;
+    margin: 50px auto;
+}
+
+.box1:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.samplephoto {
+    margin: 0 auto;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    height: 320px;
+    width: 500px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.samplephoto
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.45);
+}
+
+.sampletext{
+    color: #fff;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 19px;
+    font-weight: 500;
+    position: absolute;
+}
+
+*, :after, :before, input[type=checkbox], input[type=radio] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+

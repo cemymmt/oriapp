@@ -1,0 +1,52 @@
+.uniname{
+  margin: 100px auto;
+}
+
+.maincontents {
+    width: 732px;
+    margin: 100px auto;
+
+}
+
+h1 {
+    margin-bottom: 20px;
+    padding: 16px 20px 14px;
+    font-size: 129%;
+    background-color: #323232;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.productlist{
+    overflow: hidden;
+    list-style: none;
+}
+
+.productlist li {
+    float: left;
+    background: none;
+    margin: 0 23px 23px 0;
+    padding: 0;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+img {
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 160px;
+}
+
+.productdetail {
+ padding-bottom: 15px;
+}
+.kimonodetail {
+    display: block;
+    padding: 8px 0 6px;
+    background-color: #2bb6c1;
+    color: #ffffff;
+    font-size: 100%;
+    text-align: center;
+    text-decoration: none;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UniversitySearch</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+</head>
+
+<body>
+<div class="whitebox"></div>
+<form class="form-wrapper">
+    <input type="text" id="search" placeholder="大学名を検索" required>
+    <input type="submit" value="go" id="submit">
+</form>
+
+<p>大学名五十音順</p>
+  <div class="scrollNav">
+    <ul class="outline">
+      <li>
+         <a href="outline01">あ行</a>
+      </li>
+      <li>
+         <a href="outline02">か行</a>
+      </li>
+      <li>
+         <a href="outline03">さ行</a>
+      </li>
+      <li>
+         <a href="outline04">た行</a>
+      </li>
+      <li>
+         <a href="outline05">な行</a>
+      </li>
+      <li>
+         <a href="outline06">は行</a>
+      </li>
+       <li>
+         <a href="outline07">ま行</a>
+      </li>
+       <li>
+         <a href="outline08">や行</a>
+      </li>
+       <li>
+         <a href="outline09">ら行</a>
+      </li>
+       <li>
+         <a href="outline10">わ行</a>
+      </li>
+    </ul>
+  </div>
+
+<div class="unilist">
+<a href="" class="unis">大学</a>
+<a href="" class="unis">大学</a>
+<a href="" class="unis">大学</a>
+</div>
+</body>

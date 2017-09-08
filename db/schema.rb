@@ -10,7 +10,83 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170905083140) do
+ActiveRecord::Schema.define(version: 20170908065148) do
+
+  create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.text     "text",         limit: 65535
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "eventdate_id"
+    t.integer  "product_id"
+    t.integer  "Student_id"
+  end
+
+  create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "product_id"
+    t.integer  "student_id"
+    t.text     "text",       limit: 65535
+    t.string   "name"
+    t.datetime "date"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.string   "website"
+    t.string   "email"
+    t.integer  "phone"
+    t.text     "text",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "discounts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "company_id"
+    t.integer  "university_id"
+    t.text     "text",          limit: 65535
+    t.integer  "discount"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "eventdates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.datetime "date"
+    t.datetime "time"
+    t.text     "text",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "company_id"
+    t.integer  "uni_id"
+  end
+
+  create_table "product_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "product_id"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "title"
+    t.integer  "price"
+    t.integer  "company_id"
+    t.text     "text",          limit: 65535
+    t.text     "product_image", limit: 65535
+    t.text     "sample_image",  limit: 65535
+    t.string   "color"
+    t.string   "size"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "sample_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "product_id"
+    t.string   "image"
+    t.text     "text",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "email",                  default: "", null: false
@@ -27,6 +103,14 @@ ActiveRecord::Schema.define(version: 20170905083140) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_students_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true, using: :btree
+  end
+
+  create_table "unis", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.integer  "phone"
+    t.string   "website"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

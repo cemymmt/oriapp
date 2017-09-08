@@ -1,0 +1,244 @@
+.pdp-container {
+  min-height: 910px;
+  max-width: 980px;
+  margin: 0 auto;
+  z-index: 8;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.breadcrumbs-container {
+  display: block;
+  padding: 25px 0 40px;
+  font-size: 13px;
+}
+
+.breadcrumbs-link {
+    color: #696e79;
+    text-transform: capitalize;
+    display: inline-block;
+    padding-top: 10px;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+}
+
+.breadcrumbs-separator {
+    color: #696e79;
+    margin: 0 5px;
+    padding-top: 5px;
+}
+
+.breadcrumbs-bold-link {
+    font-weight: 500;
+}
+
+.application-base {
+    margin-top: 85px;
+    color: inherit;
+}
+
+.pdp-pdp-container {
+    min-height: 910px;
+    max-width: 980px;
+    margin: 0 auto;
+    z-index: 8;
+    position: relative;
+    min-height: 700px;
+    padding-bottom: 15px;
+}
+
+.pdp-details {
+  position: relative;
+}
+
+.pdp-image-container {
+   max-width: 540px;
+   float: left;
+   position: relative;
+   top: 0;
+   left: 0;
+   z-index: 1;
+}
+
+.thumbnails-big {
+    display: block;
+}
+
+.thumbnails-vertical-container {
+    width: 60px;
+    float: left;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.thumbnails-thumbnail-button {
+    outline: 0;
+    margin-right: 15px;
+    background-color: #fff;
+    border: 0;
+    padding: 0;
+    position: relative;
+}
+.thumbnails-thumbnail {
+    border: 1px solid #d5d6d9;
+    width: 50px;
+    height: 66px;
+    background-color: #d5d6d9;
+}
+
+.thumbnails-selected-image {
+    width: 480px;
+    height: 640px;
+    background-color: #f5f5f6;
+    border-style: none;
+    min-height: 300px;
+}
+
+.pdp-description-container {
+    padding: 0 10px 0 570px;
+    min-height: 820px;
+    margin-top: 0;
+    position: relative;
+}
+
+.pdp-price-info {
+    margin-right: 0;
+    border-bottom: 1px dotted #d5d6d9;
+    margin: 0 20px;
+    padding: 0 0 10px;
+}
+
+.pdp-title {
+    font-family: Whitney;
+    color: #696e79;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 5px 20px 0 0;
+    font-size: 16px;
+    font-weight: 500;
+    margin: .67em 0;
+}
+
+.pdp-selling-price {
+    font-size: 16px;
+    margin: 0 0 10px;
+    position: relative;
+}
+
+pdp-price {
+    font-weight: 500;
+    font-family: Whitney-SemiBold,Whitney;
+    color: #282c3f;
+}
+
+.pdp-action-container {
+    padding: 0 0 0 20px;
+    z-index: 0;
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.pdp-fixed {
+    position: relative;
+    bottom: 0;
+}
+
+.pdp-add-to-wishlist {
+    width: 34%;
+    text-align: center;
+    margin-right: 5%;
+    padding: 10px 0;
+    margin-top: 0;
+    border-radius: 3px;
+border-radius: 0;
+    padding: 10px 15px;
+    font-weight: 500;
+    border: 0;
+    background-color: #535766;
+    color: #fff;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.pdp-button {
+    border-radius: 3px;
+    outline: 0;
+    margin-top: 10px;
+    padding: 10px 30px;
+    font-size: 13px;
+    min-height: 22px;
+    -webkit-appearance: button;
+        cursor: pointer;
+    text-transform: none;
+    margin: 0;
+    overflow: visible;
+    font: inherit;
+}
+
+.pdp-whiteWishlistIcon {
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+    margin: -11px 8px;
+    margin-left: -6px;
+}
+
+.sprites-whiteWishlist {
+    background-position: -2688px 0;
+    width: 24px;
+    height: 32px;
+}
+
+
+
+.pdp-add-to-bag {
+    text-align: center;
+    padding: 10px 0;
+    min-width: 108px;
+    border-radius: 0;
+    padding: 10px 15px;
+    min-width: 108px;
+    font-weight: 500;
+    background-color: #20bd99;
+    border: 1px solid #20bd99;
+    color: #fff;
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    text-align: center;
+    width: 100%;
+}
+
+.pdp-add-to-bag, .pdp-add-to-wishlist {
+    margin-top: 0;
+    border-radius: 3px;
+}
+
+.pdp-whiteBag {
+    margin: -5px 12px -5px 0;
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+}
+
+.sprites-whiteBag {
+    background-position: -2283px -40px;
+    width: 23px;
+    height: 22px;
+}
+
+
+
+.pdp-productDescriptors {
+    border: 0;
+    border-top: 1px solid #eaeaec;
+    border-bottom: 1px solid #eaeaec;
+}
+
+
+

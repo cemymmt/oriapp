@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get 'unis/:id' => 'unis#select_options'
   get 'catalog' => 'products#kimono_list'
   get 'products/:id' => 'products#show'
+  get 'products/:id/book' => 'products#booking'
 
 end

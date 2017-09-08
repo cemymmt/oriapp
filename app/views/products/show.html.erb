@@ -8,8 +8,68 @@
 </head>
 
 <body>
-<h1>着物詳細</h1>
-<p>値段、会社、割引、商品イメージ、試着可能日、</p>
+
+<div id="mountroot" style="margin-top: -2px;">
+ <div data-reactroot class="application-base">
+  <div class="pdp-pdp-container">
+  <div>
+    <div class="breadcrumbs-container">
+        <a href="/hakamatop" class="breadcrumbs-link">Home</a>
+        <span class="breadcrumbs-separator">/</span>
+        <a href="/unilist" class="breadcrumbs-link">大学検索</a>
+        <span class="breadcrumbs-separator">/</span>
+        <a href="/unis/:id" class="breadcrumbs-link">〇〇大学</a>
+        <span class="breadcrumbs-separator">/</span>
+        <a href="/unis/:id" class="breadcrumbs-link">商品一覧</a>
+        <span class="breadcrumbs-separator">/</span>
+        <a href="/products/:id" class="breadcrumbs-bold-link breadcrumbs-link">商品詳細</a>
+    </div>
+
+    <div class="pdp_details">
+        <div class="pdp-image-container">
+          <div class="thumbnails-big">
+                <div class="thumbnails-vertical-container">
+                   <button class="thumbnails-thumbnail-button">
+                       <img class="thumbnails-thumbnail" src="/assets/kimonoshow1_2.png">
+                   </button>
+                   <button class="thumbnails-thumbnail-button">
+                       <img class="thumbnails-thumbnail" src="/assets/kimonoshow1_3.png">
+                   </button>
+                </div>
+
+                <div style="display: inline-block;">
+                   <img class="thumbnails-selected-image" src="/assets/kimonoshow1.png">
+                </div>
+          </div>
+        </div>
+
+        <div class="pdp-description-container">
+            <div class="pdp-price-info">
+              <h1 class="pdp-title">なまえ・会社</h1>
+              <p class="pdp-selling-price"><strong class="pdp-price">商品番号</strong></p>
+            </div>
+
+            <div class="pdp-action-container pdp-fixed">
+                <button class="pdp-add-to-wishlist pdp-button pdp-add-to-wishlist pdp-button">
+                <span class="myntraweb-sprite pdp-whiteWishlistIcon sprites-whiteWishlist"></span>
+                <span>あとでみる</span>
+                </button>
+                <button class="pdp-add-to-bag pdp-button">
+                <span class="myntraweb-sprite pdp-whiteBag sprites-whiteBag"></span>
+                <span>予約する</span>
+                </button>
+            </div>
+
+            <div class="pdp-productDescriptors">
+              商品説明
+            </div>
+
+        </div>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
 
 </body>
 </html>

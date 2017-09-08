@@ -5,21 +5,33 @@ body {
   text-align: center;
 }
 
+.mainbox1 {
+position: relative;
+}
 .whitebox {
-  height: 100px;
+  width: 90%;
 }
 
+.form-wrapper {
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
 a {
   color: #2A679F;
 }
 /*========*/
 
 .form-wrapper {
-  background-color: #f6f6f6;
   border-style: solid;
   border-width: 1px;
   border-color: #f6f6f6;
-  margin: 50px auto;
+  margin: 20px auto;
   overflow: hidden;
   padding: 8px;
   height: 60px;

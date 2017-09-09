@@ -3,6 +3,7 @@ class UnisController < ApplicationController
  end
 
  def unilist
+  @universities = Uni.all
  end
 
  def select_options

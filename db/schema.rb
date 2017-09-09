@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170908065148) do
+ActiveRecord::Schema.define(version: 20170909040533) do
 
   create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.text     "text",         limit: 65535
@@ -111,6 +111,7 @@ ActiveRecord::Schema.define(version: 20170908065148) do
     t.string   "website"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "furigana"
   end
 
 end

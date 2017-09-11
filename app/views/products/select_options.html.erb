@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SelectKimono</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+</head>
+
+<body>
+<div class="uniname">
+<%= @uni.name %>で予約できる袴一覧
+</div>
+
+<div class="maincontents">
+   <h1 class="listtitle">商品一覧</h1>
+     <ul class="productlist">
+     <% @products.each do |kimono| %>
+        <li>
+          <div class="kimonopic">
+            <a href="/products/<%= kimono.id %>">
+            <% num = 1 %>
+            <% kimono.product_images.each do |pic| %>
+              <% if num == 1%>
+                <img class="eachpic" src="<%= pic.image %>">
+              <% end %>
+              <% num += 1 %>
+            <% end %>
+            </a>
+          </div>
+          <p class="productdetail">
+          <a href="/products/<%= kimono.id %>" class="kimonodetail">
+            <span>詳細はこちら</span>
+          </a>
+          </p>
+        </li>
+
+        <% end %>
+
+     </ul>
+</div>
+
+
+</body>
+</html>

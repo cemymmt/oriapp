@@ -250,6 +250,7 @@ a {
   background-image: -ms-linear-gradient(top, #0483a0, #31b2c3);
   background-image: -o-linear-gradient(top, #0483a0, #31b2c3);
   background-image: linear-gradient(top, #0483a0, #31b2c3);
+
 }
 
 .form-wrapper-top #submit:active {
@@ -257,7 +258,7 @@ a {
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
   outline: 0;
-}
+  }
 
 .form-wrapper-top #submit::-moz-focus-inner {
   border: 0;

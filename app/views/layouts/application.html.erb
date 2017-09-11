@@ -9,10 +9,10 @@
 <header>
     <div class = "title-box">
     <div class="title">Website-Title</div>
-    <form action="uni/search" method="get" class="form-wrapper-top">
-               <input type="text" id="search" placeholder="大学名を入力" required>
+    <%= form_tag('/uni/search', method: :get, class: "form-wrapper-top") do %>
+               <input type="text" id="search" name="keyword" placeholder="大学名を入力" required>
               <input type="submit" value="検索" id="submit">
-    </form>
+    <% end %>
     </div>
   </header>
   <body>

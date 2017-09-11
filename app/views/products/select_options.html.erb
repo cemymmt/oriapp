@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<div class="uniname">
+<div class="uni_name">
 <%= @uni.name %>で予約できる袴一覧
 </div>
 
@@ -18,9 +18,9 @@
      <% @products.each do |kimono| %>
         <li>
           <div class="kimonopic">
-            <a href="/products/<%= kimono.id %>">
             <% num = 1 %>
             <% kimono.product_images.each do |pic| %>
+          <a href="/products/<%= kimono.id %>?uni=<%= params[:id]%>" class="eachpic">
               <% if num == 1%>
                 <img class="eachpic" src="<%= pic.image %>">
               <% end %>
@@ -28,11 +28,11 @@
             <% end %>
             </a>
           </div>
-          <p class="productdetail">
-          <a href="/products/<%= kimono.id %>" class="kimonodetail">
+          <a href="/products/<%= kimono.id %>?uni=<%= params[:id]%>" class="kimonodetail">
+          <p class="kimonodetail">
             <span>詳細はこちら</span>
-          </a>
           </p>
+          </a>
         </li>
 
         <% end %>

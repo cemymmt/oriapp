@@ -7,8 +7,8 @@ class UnisController < ApplicationController
  end
 
 def search
-  binding.pry
-  @unis = Uni.where('title LIKE(?)', "%#{params[:keyword]}%")
+  @unis = Uni.new
+  @unis = Uni.where('name LIKE(?)', "%#{params[:keyword]}%")
 end
 
 

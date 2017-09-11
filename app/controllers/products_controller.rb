@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
 
   def show
   @product = Product.find(params[:id])
-  binding.pry
+  @uni = Uni.find(params[:uni])
   end
 
  def select_options

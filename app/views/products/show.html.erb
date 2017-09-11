@@ -26,19 +26,21 @@
     </div>
 
     <div class="pdp_details">
+    <%= @product.product_images.each do |pic| %>
         <div class="pdp-image-container">
           <div class="thumbnails-big">
                 <div class="thumbnails-vertical-container">
                    <button class="thumbnails-thumbnail-button">
-                       <img class="thumbnails-thumbnail" src="/assets/kimonoshow1_2.png">
+                       <img class="thumbnails-thumbnail" src="<%= pic.image %>">
                    </button>
                    <button class="thumbnails-thumbnail-button">
-                       <img class="thumbnails-thumbnail" src="/assets/kimonoshow1_3.png">
+                       <img class="thumbnails-thumbnail" src="<%= pic %>">
                    </button>
                 </div>
 
                 <div style="display: inline-block;">
-                   <img class="thumbnails-selected-image" src="/assets/kimonoshow1.png">
+                   <img class="thumbnails-selected-image" src="<%= pic %>">
+                <% end %>
                 </div>
           </div>
         </div>

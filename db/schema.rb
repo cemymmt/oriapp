@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170908065148) do
+ActiveRecord::Schema.define(version: 20170909065245) do
 
   create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.text     "text",         limit: 65535
@@ -71,13 +71,13 @@ ActiveRecord::Schema.define(version: 20170908065148) do
     t.string   "title"
     t.integer  "price"
     t.integer  "company_id"
-    t.text     "text",          limit: 65535
-    t.text     "product_image", limit: 65535
-    t.text     "sample_image",  limit: 65535
+    t.text     "text",             limit: 65535
     t.string   "color"
     t.string   "size"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "sample_image_id"
+    t.integer  "product_image_id"
   end
 
   create_table "sample_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -111,6 +111,7 @@ ActiveRecord::Schema.define(version: 20170908065148) do
     t.string   "website"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "furigana"
   end
 
 end

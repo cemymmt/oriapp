@@ -3,9 +3,13 @@ class UnisController < ApplicationController
  end
 
  def unilist
+  @universities = Uni.all
  end
 
- def select_options
- end
+def search
+  binding.pry
+  @unis = Uni.where('title LIKE(?)', "%#{params[:keyword]}%")
+end
+
 
 end

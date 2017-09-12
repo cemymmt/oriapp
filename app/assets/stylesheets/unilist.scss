@@ -1,11 +1,12 @@
 .spaceofheader{
   height: 100px;
 }
-body {
+.unilistbody {
   background: #fff;
   font: 12px Lucida sans, Arial, Helvetica, sans-serif;
   color: #333;
   text-align: center;
+  font-weight: bold;
 }
 
 .mainbox1 {
@@ -132,6 +133,7 @@ a {
     padding: 7px 7px 7px 6px;
     border: 1px solid #cdcdcd;
     background-color: #e9e9e9;
+    font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 
 ul {
@@ -158,12 +160,24 @@ li {
 
 
 
+.unilist {
+  margin: 20px 0px 0px 80px;
+  font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+    display: flex;
+    position: relative;
+    background: #fff;
+    -webkit-box-orient: vertical;
 
+}
 .uniname {
  font-size: 15px;
+ color: #323232;
+ -webkit-transition: color 0.3s ease-in-out 0s;
 }
 
-
+.uniresultbody {
+  margin: 100px auto;
+}
 
 
 

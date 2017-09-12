@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
 
+before_action :authenticate_student!, only: :booking
   def kimono_list
   end
 
@@ -15,4 +16,20 @@ class ProductsController < ApplicationController
 
   def booking
   end
+
+  def new
+    @product = Product.find(params[:product_id])
+    @booking = Booking.new
+  end
+
+  def create
+    Booking.create(create_params)
+    redirect_to controller: :products, action:  :index
+  end
+
+  private
+  def create_params
+    params.require(:review).permit(:rate, :review).merge(product_id: params[:product_id], student_id: current_user.id)
+  end
+
 end

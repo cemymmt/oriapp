@@ -1,11 +1,14 @@
-<h2>検索結果</h2>
+
+<div class="uniresultbody">
+<h2 class="unilist uniname">検索結果</h2>
 
 <% @unis.each do |uni| %>
 <li>
-<a class="search_result" href="/unis/<%= uni.id %>">
+<a class="unilist uniname" href="/unis/<%= uni.id %>">
 <div>
 <%= uni.name %>
 </div>
 </a>
 </li>
 <% end %>
+</div>

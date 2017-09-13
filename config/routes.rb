@@ -8,5 +8,8 @@ Rails.application.routes.draw do
   get 'products/:id' => 'products#show'
   get 'products/:id/book' => 'products#booking'
   get 'uni/search' => 'unis#search'
+  get 'products/:id/book/new' => 'products#new'
+  post 'products/:id/booking' => 'products#create'
+
 
 end

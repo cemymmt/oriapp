@@ -2,6 +2,7 @@
   height: 100px;
 }
 .title-box {
+  background-color: #2bb6c1;
   background: rgba(255, 255, 255, 0);
   border-bottom: 1px solid rgba(219, 219, 219, 0);
   overflow: hidden;
@@ -9,7 +10,7 @@
   top: 0;
   z-index: 101;
   width: 100%;
-  height: 100px;
+  height: 60px;
 }
 .login_logout{
   text-align: center;
@@ -25,7 +26,7 @@
   color: #2bb6c1;
   text-align: left;
   font-size: 15px;
-  margin: 10px 10px 10px 50px;
+  margin: 8px 10px 10px 50px;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 
@@ -37,6 +38,7 @@
 
 .introduction{
     position: relative;
+    top: 0;
     height: 550px;
     z-index: 1;
     background-color: #333;
@@ -48,15 +50,18 @@
 .introduction
 .overlay{
     position: absolute;
+    margin: 100px 0px 0px 0px;
     z-index: 999;
+    height: 200px;
     top: 50%;
     width: 100%;
+    background: rgba(0,0,0,.5);
     transform: translateY(-30%);
 }
 
 .introduction
 .overlay h1{
-    margin: 70px 0px auto;
+    margin: 40px 0px auto;
     color: #fff;
     text-align: center;
     font-size: 18px;
@@ -67,7 +72,7 @@
 .overlay
 .button-wrap{
   text-align: center;
-  margin: 30px auto 50px;
+  margin: 20px auto 50px;
 }
 
 .button-wrap
@@ -76,7 +81,7 @@
   text-align: center;
   text-decoration: none;
   height:35px;
-  width: 120px;
+  width: 170px;
   line-height: 37px;
   text-align: center;
   color: #2bb6c1;
@@ -86,7 +91,7 @@
   -o-transition: 0.3s;
   -ms-transition: 0.3s;
   transition: 0.3s;
-  margin: 30px auto 80px;
+  margin: 20px auto 80px;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 .button:hover {
@@ -183,7 +188,7 @@ a {
 
 .form-wrapper-top {
     position: absolute;
-    top: 30px;
+    top: 8px;
     right: 30px;
   border-style: solid;
   border-width: 1px;

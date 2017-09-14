@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>SelectKimono</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-      <%= csrf_meta_tags %>
-</head>
 
-<body>
 <div class="uni_name_line">
 <%= @uni.name %>で予約できる袴一覧
 </div>
@@ -20,7 +11,7 @@
           <div class="kimonopic">
             <% num = 1 %>
             <% kimono.product_images.each do |pic| %>
-          <a href="/products/<%= kimono.id %>?uni=<%= params[:id]%>" class="eachpic">
+          <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>" class="eachpic">
               <% if num == 1%>
                 <img class="eachpic" src="<%= pic.image %>">
               <% end %>
@@ -28,7 +19,7 @@
             <% end %>
             </a>
           </div>
-          <a href="/products/<%= kimono.id %>?uni=<%= params[:id]%>" class="kimonodetail">
+          <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>" class="kimonodetail">
           <p class="kimonodetail">
             <span>詳細はこちら</span>
           </p>
@@ -39,7 +30,3 @@
 
      </ul>
 </div>
-
-
-</body>
-</html>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170912125220) do
+ActiveRecord::Schema.define(version: 20170914043710) do
 
   create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.text     "text",         limit: 65535
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20170912125220) do
     t.datetime "updated_at",                 null: false
     t.integer  "eventdate_id"
     t.integer  "product_id"
-    t.integer  "Student_id"
+    t.integer  "student_id"
   end
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -56,8 +56,14 @@ ActiveRecord::Schema.define(version: 20170912125220) do
     t.datetime "updated_at",               null: false
     t.integer  "company_id"
     t.integer  "uni_id"
-    t.string   "day"
     t.string   "time"
+  end
+
+  create_table "favorites", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "student_id"
+    t.integer  "product_id"
   end
 
   create_table "product_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

@@ -1,0 +1,31 @@
+<div class="bookingpage">
+<div class="bookingbox">
+<h1>試着を予約</h1>
+<br>
+
+
+卒業する大学:    <%= @uni.name %>
+<br>
+名前:      <%= @student.name %>
+<br>
+試着する商品:     <%= @product.title %><br>
+
+<%= form_for ([@uni, @product, @booking]) do |f| %>
+<%= f.collection_select :eventdate_id, @eventdates, :id, :time %>
+<%= f.text_area :text, :placeholder => "例: 他の色も試してみたい！"%>
+ <%= f.submit "予約する" %>
+<% end %>
+<br>
+<img class="bookingphoto" src="<%= @product.product_images[0].image %>">
+
+<br><br>
+
+
+
+</div>
+</div>
+
+
+
+
+

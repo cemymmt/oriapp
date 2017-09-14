@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>KimonoDetail</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-      <%= csrf_meta_tags %>
-</head>
-
-<body>
 
 <div id="mountroot" style="margin-top: -2px;">
  <div data-reactroot class="application-base">
   <div class="pdp-pdp-container">
   <div>
     <div class="breadcrumbs-container">
-        <a href="/hakamatop" class="breadcrumbs-link">Home</a>
+        <a href="/top" class="breadcrumbs-link">Home</a>
         <span class="breadcrumbs-separator">/</span>
         <a href="/unilist" class="breadcrumbs-link">大学検索</a>
         <span class="breadcrumbs-separator">/</span>
@@ -58,9 +48,10 @@
             <div class="pdp-action-container pdp-fixed">
                 <button class="pdp-add-to-wishlist pdp-button pdp-add-to-wishlist pdp-button">
                 <span class="myntraweb-sprite pdp-whiteWishlistIcon sprites-whiteWishlist"></span>
-                <span>あとでみる</span>
+                <span><%= link_to "候補に登録", favorites_path(@product.id, uni_id: @uni.id), method: :post %></span>
                 </button>
-                <a href="/products/<%= @product.id %>/book">
+
+                <a href="/unis/<%= @uni.id %>/products/<%= @product.id %>/bookings/new">
                 <button class="pdp-add-to-bag pdp-button">
                 <span class="myntraweb-sprite pdp-whiteBag sprites-whiteBag"></span>
                 <span>予約する</span>
@@ -82,5 +73,3 @@
   </div>
 </div>
 
-</body>
-</html>

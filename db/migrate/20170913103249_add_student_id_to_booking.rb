@@ -1,5 +1,5 @@
 class AddStudentIdToBooking < ActiveRecord::Migration[5.0]
   def change
-    add_column :bookings, :Student_id, :integer
+    add_column :bookings, :student_id, :integer
   end
 end

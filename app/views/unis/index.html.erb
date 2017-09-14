@@ -1,61 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>UniversitySearch</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-      <%= csrf_meta_tags %>
-</head>
 
-<body>
+<div class="unilistbody">
+<div class="mainbox1">
+<div class="whitebox"></div>
+
+</div>
 
 
-  <div class="introduction">
-    <div class="overlay">
-       <h1>
-          find and book your best memory
-         <br>
-        卒業生のためのレンタル袴比較＆試着の予約サイト
-        </h1>
-         <div class="button-wrap">
-          <a href="/unilist" class="button">
-            袴をさがす
-           </a>
-        </div>
-        <div class="buttonmargin">
-        </div>
-
-    </div>
+  <div class="scrollNav">
+    <ul class="outline">
+      <li>
+         <a href="outline01">あ行</a>
+      </li>
+      <li>
+         <a href="outline02">か行</a>
+      </li>
+      <li>
+         <a href="outline03">さ行</a>
+      </li>
+      <li>
+         <a href="outline04">た行</a>
+      </li>
+      <li>
+         <a href="outline05">な行</a>
+      </li>
+      <li>
+         <a href="outline06">は行</a>
+      </li>
+       <li>
+         <a href="outline07">ま行</a>
+      </li>
+       <li>
+         <a href="outline08">や行</a>
+      </li>
+       <li>
+         <a href="outline09">ら行</a>
+      </li>
+       <li>
+         <a href="outline10">わ行</a>
+      </li>
+    </ul>
   </div>
 
-  <div class="section featured-venues">
-    <div class="container">
-      <div class="row">
-        <div class="featured-title">
-          <h3 class="whatwedo" style="padding-top: 0px; opacity: 1;">WHAT WE DO</h3>
-          <h4 class="explanation1">自分の卒業する大学の展示イベント、お得なキャンペーン情報を<br>まとめて検索、試着の予約までできる！</h4>
-          <h4 class="explanation2">お店のカタログ写真に加え、<br>過去の卒業生のコーディネートまで含めた膨大なデザインから選べる！</h4>
-        </div>
-      </div>
-      <div class="row">
-       <div class="box1">
-         <p><img src="assets/anders-jilden-89745.jpg" alt="samplephoto" class="samplephoto"></p>
-          <div class="overlay">
-            <div class="sampletext">過去のコーディネートをみる</div>
-          </div>
-       </div>
-
-       <div class="box1">
-         <p><img src="assets/anthony-delanoix-222456.jpg" alt="samplephoto" class="samplephoto"></p>
-          <div class="overlay">
-            <div class="sampletext">店から選ぶ</div>
-          </div>
-       </div>
-      </div>
-
-    </div>
-  </div>
-
-
-</body>
-</html>
+<% @universities.each do |uni| %>
+<div class="unilist">
+<a href="/unis/<%= uni.id %>/products" class="uniname">
+<%= uni.name %>
+</a>
+</div>
+<% end %>
+</div>
+</div>

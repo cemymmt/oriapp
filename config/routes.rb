@@ -1,15 +1,30 @@
 Rails.application.routes.draw do
   devise_for :students
-  root 'unis#index'
-  get 'hakamatop' => 'unis#index'
-  get 'unilist' => 'unis#unilist'
-  get 'unis/:id' => 'products#select_options'
-  get 'catalog' => 'products#kimono_list'
-  get 'products/:id' => 'products#show'
-  get 'products/:id/book' => 'products#booking'
+  root 'unis#top'
+
+  resources :unis, only: :index do
+      resources :products, only: [:index, :show] do
+         member do
+          post "add", to: "favorites#create"
+         end
+         resources :bookings, only: [:new, :create]
+           collection do
+             get 'top'
+             get 'search'
+             get 'kimono_list'
+           end
+      end
+  end
+
+  resources :students
+  resources :favorites, only: [:create, :destroy]
+
+  get 'top' => 'unis#top'
   get 'uni/search' => 'unis#search'
-  get 'products/:id/book/new' => 'products#new'
-  post 'products/:id/booking' => 'products#create'
+  get 'catalog' => 'products#kimono_list'
+
+
+
 
 
 end

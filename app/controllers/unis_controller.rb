@@ -1,8 +1,8 @@
 class UnisController < ApplicationController
- def index
+ def top
  end
 
- def unilist
+ def index
   @universities = Uni.all
  end
 

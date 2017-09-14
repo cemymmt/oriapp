@@ -12,8 +12,8 @@
      <%= link_to "log in", new_student_session_path, method: :get %>
     <%= link_to "log out", destroy_student_session_path, method: :delete %>
     </div>
-    <div class="webtitle">Website-Title</div>
-    <%= form_tag('/uni/search', method: :get, class: "form-wrapper-top") do %>
+    <a href="/top" class="webtitle">Website-Title</a>
+    <%= form_tag('/unis/search', method: :get, class: "form-wrapper-top") do %>
                <input type="text" id="search" name="keyword" placeholder="大学名を入力" required>
               <input type="submit" value="検索" id="submit">
     <% end %>

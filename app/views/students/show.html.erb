@@ -1,7 +1,19 @@
 
+マイページ
+<br>
+名前  <%= @student.name %>
+<br>
+<br>
+お気にいりに追加した商品リスト
+<br>
 <% @student.products.each do |product| %>
-          <tr>
-            <td><%= product.name %></td>
+<tr>
 
-          </tr>
-        <% end %>
+<td><%= product.title %></td>
+<br>
+<img class="bookingphoto" src="<%= product.product_images[0].image %>">
+</tr>
+<br>
+<% end %>
+
+

@@ -1,0 +1,142 @@
+@media screen and (min-width: 961px) {
+#menu{
+z-index: 2;
+  list-style-type: none;
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  padding: 0;
+  background: #222e33;
+}
+#menu li{
+z-index: 2;
+  position: relative;
+  width: 20%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#menu li a{
+z-index: 2;
+  display: block;
+  margin: 0;
+  padding: 12px 0 12px;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+}
+#menu li:hover > a{
+z-index: 2;
+  background: #46b0b0;
+  color: #ffffff;
+  font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+}
+#menu > li:hover > a{
+z-index: 2;
+  border-radius: 3px 3px 3px 3px;
+}
+#menu li ul{
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 3px 3px 3px 3px;
+}
+#menu li ul li{
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  color: #fff;
+}
+#menu li ul li a{
+  padding: 13px 15px;
+  background: #253738;
+  text-align: left;
+  font-size: 13px;
+  font-weight: normal;
+}
+#menu li:hover ul li{
+  overflow: hidden;
+  height: 34px;
+  border-bottom: 1px solid #ffffff;
+}
+#menu li:hover ul li:last-child a{
+  border-radius: 3px 3px 20px 20px;
+}
+}
+
+
+@media screen and (max-width: 769px) {
+#menu{
+z-index: 2;
+  list-style-type: none;
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  padding: 0;
+  background: #222e33;
+}
+#menu li{
+z-index: 2;
+  position: relative;
+  width: 20%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#menu li a{
+z-index: 2;
+  display: block;
+  margin: 0;
+  padding: 12px 0 12px;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+}
+#menu li:hover > a{
+z-index: 2;
+  background: #46b0b0;
+  color: #ffffff;
+  font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+}
+#menu > li:hover > a{
+z-index: 2;
+  border-radius: 3px 3px 3px 3px;
+}
+#menu li ul{
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 3px 3px 3px 3px;
+}
+#menu li ul li{
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  color: #fff;
+}
+#menu li ul li a{
+  padding: 13px 15px;
+  background: #253738;
+  text-align: left;
+  font-size: 13px;
+  font-weight: normal;
+}
+#menu li:hover ul li{
+  overflow: hidden;
+  height: 34px;
+  border-bottom: 1px solid #ffffff;
+}
+#menu li:hover ul li:last-child a{
+  border-radius: 3px 3px 20px 20px;
+}
+}

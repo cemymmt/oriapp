@@ -1,0 +1,4 @@
+<li>
+  <%= comment.text %>
+  <%= link_to '削除', comments_path(comment), method: :delete, remote: true %>
+</li>

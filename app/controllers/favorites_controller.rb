@@ -1,11 +1,13 @@
 class FavoritesController < ApplicationController
 
+before_action :authenticate_student!, only: :create
+
 def create
   @student_id = current_student.id
   @product_id = Product.find(params[:format]).id
   @favorite = Favorite.new(product_id: @product_id, student_id: @student_id)
   if @favorite.save
-    redirect_to uni_products_path(params[:uni_id])
+    redirect_to student_path(current_student.id)
   end
 end
 

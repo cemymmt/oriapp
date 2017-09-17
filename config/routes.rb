@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'unis#top'
 
   resources :unis, only: :index do
-      resources :products, only: [:index, :show] do
+      resources :products, only: [:index, :show, :create, :destroy] do
          member do
           post "add", to: "favorites#create"
          end
@@ -22,9 +22,7 @@ Rails.application.routes.draw do
   get 'top' => 'unis#top'
   get 'uni/search' => 'unis#search'
   get 'catalog' => 'products#kimono_list'
-
-
-
+  delete 'comments' => 'products#destroy'
 
 
 end

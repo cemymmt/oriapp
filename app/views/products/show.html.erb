@@ -11,7 +11,7 @@
         <a href="/unis/<%= @uni.id %>" class="breadcrumbs-link"><%= @uni.name %></a>
         <span class="breadcrumbs-separator">/</span>
         <a href="/unis/<%= @uni.id %>" class="breadcrumbs-link">商品一覧</a>
-        <span class="breadcrumbs-separator">/</span>
+        <span class="breadcrumbs-separator">>>></span>
         <a href="/products/:id" class="breadcrumbs-bold-link breadcrumbs-link">商品詳細</a>
     </div>
 
@@ -47,13 +47,12 @@
 
             <div class="pdp-action-container pdp-fixed">
                 <button class="pdp-add-to-wishlist pdp-button pdp-add-to-wishlist pdp-button">
-                <span class="myntraweb-sprite pdp-whiteWishlistIcon sprites-whiteWishlist"></span>
-                <span><%= link_to "候補に登録", favorites_path(@product.id, uni_id: @uni.id), method: :post %></span>
+                <span><%= link_to "候補に登録", favorites_path(@product.id, uni_id: @uni.id), method: :post, class: "pdp-add-to-wishlist" %></span>
                 </button>
 
                 <a href="/unis/<%= @uni.id %>/products/<%= @product.id %>/bookings/new">
                 <button class="pdp-add-to-bag pdp-button">
-                <span class="myntraweb-sprite pdp-whiteBag sprites-whiteBag"></span>
+
                 <span>予約する</span>
                 </button>
                 </a>
@@ -65,11 +64,44 @@
             <div class="product_explain">
             <%= @product.text %>
             </div>
+            <div style='width: 100%;'>
+            <div id="map" style='width: 100%; height: 33vh;'></div>
+            </div>
 
+<%= form_for ([@uni, @comment]), remote: true, :url => {:action => 'create'} do |f| %>
+  <%= f.text_field :text %>
+  <%= f.submit '投稿' %>
+<% end %>
+ <ul>
+  <% @comments.each do |comment| %>
+    <%= render partial: "comment", locals: {comment: comment} %>
+  <% end %>
+</ul>
         </div>
     </div>
     </div>
   </div>
   </div>
 </div>
+
+
+<script type="text/javascript">
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers([
+      {
+        "lat": <%= @product.company.latitude %>,
+        "lng": <%= @product.company.longitude %>,
+        "picture": {
+          "width":  32,
+          "height": 32
+        },
+        "infowindow": '<%= @product.company.name %>'
+      }
+    ]);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+    handler.getMap().setZoom(15);
+  });
+</script>
 

@@ -217,8 +217,10 @@ GEM
       fog-core
       nokogiri (>= 1.5.11, < 2.0.0)
     formatador (0.2.5)
+    geocoder (1.4.4)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    gmaps4rails (2.1.2)
     haml (5.0.2)
       temple (>= 0.8.0)
       tilt
@@ -383,6 +385,8 @@ DEPENDENCIES
   devise
   erb2haml
   fog
+  geocoder
+  gmaps4rails
   jbuilder (~> 2.5)
   jquery-rails
   kaminari

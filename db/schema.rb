@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170914043710) do
+ActiveRecord::Schema.define(version: 20170917022301) do
 
   create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.text     "text",         limit: 65535
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 20170914043710) do
     t.text     "text",       limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.float    "latitude",   limit: 24
+    t.float    "longitude",  limit: 24
   end
 
   create_table "discounts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

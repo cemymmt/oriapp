@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :products, only: [:index, :show, :create, :destroy] do
          member do
           post "add", to: "favorites#create"
+          get 'find'
          end
          resources :bookings, only: [:new, :create]
            collection do
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
       end
   end
 
-  resources :students
+  resources :students, only: [:show]
   resources :favorites, only: [:create, :destroy]
 
   get 'top' => 'unis#top'

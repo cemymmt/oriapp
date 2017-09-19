@@ -43,9 +43,7 @@
 
 <% @universities.each do |uni| %>
 <div class="unilist">
-<a href="/unis/<%= uni.id %>/products" class="uniname">
-<%= uni.name %>
-</a>
+    <a href="/unis/<%= uni.id %>/products" class="uniname"><%= uni.name %></a>
 </div>
 <% end %>
 </div>

@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
   @uni = Uni.find(params[:uni_id])
   @comments = Comment.all
   @comment = Comment.new
+  @discount = Discount.where(university_id: @uni.id, company_id: @product.company.id)
   end
 
   def create
@@ -21,16 +22,17 @@ class ProductsController < ApplicationController
     @comments = Comment.all
   end
 
-  private
-  def comment_params
-    params.require(:comment).permit(:text)
-  end
-
  def index
   @uni = Uni.find(params[:uni_id])
   @products = Product.all
  end
 
+  def find
+  end
 
+  private
+  def comment_params
+    params.require(:comment).permit(:text)
+  end
 
 end

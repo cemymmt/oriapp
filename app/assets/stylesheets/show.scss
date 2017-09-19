@@ -9,7 +9,7 @@
 
 .breadcrumbs-container {
   display: block;
-  padding: 25px 0 40px;
+  padding: 0 0 40px;
   font-size: 13px;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
@@ -99,7 +99,7 @@
 
 .pdp-description-container {
     padding: 0 10px 0 570px;
-    min-height: 820px;
+    min-height: 680px;
     margin-top: 0;
     position: relative;
 }
@@ -109,30 +109,32 @@
     border-bottom: 1px dotted #d5d6d9;
     margin: 0 20px;
     padding: 0 0 10px;
+    width: 380px;
     font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 
 .pdp-title {
-    font-family: Whitney;
-    color: #696e79;
-    margin-top: 0;
-    margin-bottom: 5px;
-    padding: 5px 20px 0 0;
-    font-size: 16px;
-    font-weight: 500;
+    border-top: 3px solid #eaeaec;
+    border-bottom: 3px solid #eaeaec;
+    color: #191a1a;
+    margin: 10px 20px 0 0;
+    font-size: 20px;
+    font-weight: 800;
     margin: .67em 0;
     font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 
 .pdp-selling-price {
-    font-size: 16px;
-    margin: 0 0 10px;
+    font-size: 15px;
+    margin: 0 10px 10px;
     position: relative;
+    text-align: right;
     font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 
-pdp-price {
+.pdp-price a{
     font-weight: 500;
+    text-decoration: none;
     font-family: Whitney-SemiBold,Whitney;
     color: #282c3f;
     font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
@@ -216,9 +218,9 @@ border-radius: 0;
     background-color: #20bd99;
     border: 1px solid #20bd99;
     color: #fff;
-    -webkit-box-flex: 2;
-    -ms-flex: 2;
-    flex: 2;
+    -webkit-box-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
     text-align: center;
     width: 100%;
     font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
@@ -253,4 +255,34 @@ border-radius: 0;
 
 .product_explain{
     font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+}
+
+.product-price{
+    font-size: 30px;
+    font-weight: 700;
+    color: #ff3300;
+    width: 200px;
+    margin: 0 auto;
+}
+.priceinf{
+display: inline;
+}
+.pricebox{
+    margin: 0 auto;
+}
+
+.discount {
+    font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+    padding: 0 0 10px;
+    margin: 20px 20px;
+    margin-right: 0;
+    font-size: 17px;
+    font-weight: 400;
+    color: #ff3300;
+    line-height: 10px;
+}
+.discount p{
+    color: #242424;
+    font-size: 14px;
+    font-weight: 300;
 }

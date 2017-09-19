@@ -1,6 +1,11 @@
 
+<div class="uni-box">
 <div class="uni_name_line">
-<%= @uni.name %>で予約できる袴一覧
+<p><%= @uni.name %></p>で予約できる袴一覧
+</div>
+<div  class="uni-info">
+卒業式日程:  <%= @uni.graduation %>
+</div>
 </div>
 
 <div class="maincontents">
@@ -13,6 +18,7 @@
         <span class="breadcrumbs-separator">>>></span>
         <a href="/unis/<%= @uni.id %>" class="breadcrumbs-link">商品一覧</a>
       </div>
+
 
 
    <h1 class="listtitle">商品一覧</h1>

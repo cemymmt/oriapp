@@ -1,10 +1,26 @@
+.uni-box{
+  text-align: center;
+  margin: 50px 0px 0px 0px;
+}
 .uni_name_line{
+display: inline;
  font-size: 20px;
   margin: 100px 0px 0px 0px;
-  text-align: center;
+  font-weight: 600;
+  color: #323232;
+
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
-
+.uni_name_line p{
+display: inline;
+    color: #2bb6c1;
+    font-weight: 800;
+}
+.uni-info{
+  text-align: center;
+  font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+  margin: 10px auto;
+}
 .maincontents {
     width: 732px;
     margin: 100px auto;

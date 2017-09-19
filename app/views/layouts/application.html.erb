@@ -31,18 +31,18 @@
   <li><a href="">アカウント</a>
     <ul>
       <li><a href="/students/sign_up">新規登録</a></li>
-      <li><a href="/students/sign_in">ログイン</a></li>
-      <li><a href="/students/sign_out">ログアウト</a></li>
-      <li><a href="#">マイページ</a></li>
+      <li><%if student_signed_in? %>
+             <%= link_to  "ログアウト",destroy_student_session_path, method: :delete, class: "a" %>
+          <% else %>
+            <a href="/students/sign_in">ログイン</a>
+          <% end %>
+      </li>
+      <%if student_signed_in? %>
+             <li><a href="/students/<%= current_student.id %>">マイページ</a>
+          <% end %>  </li>
     </ul>
   </li>
   <li><a href="#">お問い合わせ</a>
-    <ul>
-      <li><a href="#">sub-menu1</a></li>
-      <li><a href="#">sub-menu2</a></li>
-      <li><a href="#">sub-menu3</a></li>
-      <li><a href="#">sub-menu4</a></li>
-    </ul>
   </li>
 
 </ul>

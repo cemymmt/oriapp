@@ -2,6 +2,7 @@ class Company < ApplicationRecord
   has_many :products
   has_many :dicounts
   has_many :eventdates
+  has_many :eventdetails
 
 before_save :geocode_full_address
 

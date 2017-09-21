@@ -5,34 +5,48 @@ class ProductsController < ApplicationController
   end
 
   def show
-  @product = Product.find(params[:id])
-  @uni = Uni.find(params[:uni_id])
-  @comments = Comment.all
-  @comment = Comment.new
-  @discount = Discount.where(university_id: @uni.id, company_id: @product.company.id)
+    @product = Product.find(params[:id])
+    @uni = Uni.find(params[:uni_id])
+    @comments = Comment.where(product_id: @product.id)
+    @comment = Comment.new
+    @discount = Discount.where(university_id: @uni.id, company_id: @product.company.id)
+    @eventdetail = Eventdetail.where(company_id: @product.company.id)
   end
 
   def create
-  Comment.create(comment_params)
-  @comments = Comment.all
+    # binding.pry
+    Comment.create(comment_params)
+    @product = Product.find(params[:comment][:product_id])
+    @comments = Comment.where(product_id: @product.id).last
   end
 
   def destroy
     Comment.find(params[:format]).destroy
-    @comments = Comment.all
+    @product = Product.find(params[:comment][:product_id])
+    @comments = Comment.where(product_id: @product.id).last
   end
 
  def index
-  @uni = Uni.find(params[:uni_id])
-  @products = Product.all
+    @uni = Uni.find(params[:uni_id])
+    @products = Product.all
  end
 
-  def find
-  end
+ def search
+  @uni = Uni.find(params[:uni_id])
+  @products = Product.new
+  @products = Product.where('title LIKE(?)', "%#{params[:keyword]}%")
+ end
+
+ def search_color
+  @uni = Uni.find(params[:uni_id])
+  @products = Product.new
+  @products = Product.where()
+end
+
 
   private
   def comment_params
-    params.require(:comment).permit(:text)
+    params.require(:comment).permit(:text, :student_id, :product_id)
   end
 
 end

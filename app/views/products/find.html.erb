@@ -1,7 +1,0 @@
-<div>
-<%= form_tag(funi_products_path, method: "get") do %>
-<%= label_tag :name, "色" %>
-<%= select_tag :color, options_for_select(Product.genders), include_blank: true %>
-<%= submit_tag "検索" %>
-<% end %>
-</div>

@@ -6,7 +6,8 @@ Rails.application.routes.draw do
       resources :products, only: [:index, :show, :create, :destroy] do
          member do
           post "add", to: "favorites#create"
-          get 'find'
+          get 'search'
+          get 'search_color'
          end
          resources :bookings, only: [:new, :create]
            collection do

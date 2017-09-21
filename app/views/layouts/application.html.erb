@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <script src="//maps.google.com/maps/api/js?key=[AIzaSyBPow4J6sM5xM-ExrVj_tQ70yQ0SiYjwkc]"></script>
+  <script src="//maps.google.com/maps/api/js?key=AIzaSyBPow4J6sM5xM-ExrVj_tQ70yQ0SiYjwkc"></script>
   <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -14,45 +14,53 @@
 <header>
     <div class = "title-box">
     <a href="/top" class="webtitle">Hakama-Book</a>
-    <%= form_tag('/unis/search', method: :get, class: "form-wrapper-top") do %>
-               <input type="text" id="search" name="keyword" placeholder="大学名を入力" required>
-              <input type="submit" value="検索" id="submit">
-    <% end %>
+          <%= form_tag('/unis/search', method: :get, class: "form-wrapper-top") do %>
+                     <input type="text" id="search" name="keyword" placeholder="大学名を入力" required>
+                    <input type="submit" value="検索" id="submit">
+          <% end %>
     </div>
 
-    <nav>
-            <ul id="menu">
-  <li><a href="/top">HOME</a>
-  </li>
-  <li><a href="#">ABOUT</a>
-  </li>
-  <li><a href="/unis">大学一覧</a>
-  </li>
-  <li><a href="">アカウント</a>
-    <ul>
-      <li><a href="/students/sign_up">新規登録</a></li>
-      <li><%if student_signed_in? %>
-             <%= link_to  "ログアウト",destroy_student_session_path, method: :delete, class: "a" %>
-          <% else %>
-            <a href="/students/sign_in">ログイン</a>
-          <% end %>
-      </li>
-      <%if student_signed_in? %>
-             <li><a href="/students/<%= current_student.id %>">マイページ</a>
-          <% end %>  </li>
-    </ul>
-  </li>
-  <li><a href="#">お問い合わせ</a>
-  </li>
+          <nav>
+                  <ul id="menu">
+        <li><a href="/top">HOME</a>
+        </li>
+        <li><a href="#">ABOUT</a>
+        </li>
+        <li><a href="/unis">大学一覧</a>
+        </li>
+        <li><a href="">アカウント</a>
+          <ul>
+            <li><a href="/students/sign_up">新規登録</a></li>
+            <li><%if student_signed_in? %>
+                   <%= link_to  "ログアウト",destroy_student_session_path, method: :delete, class: "a" %>
+                <% else %>
+                  <a href="/students/sign_in">ログイン</a>
+                <% end %>
+            </li>
+            <%if student_signed_in? %>
+                   <li><a href="/students/<%= current_student.id %>">マイページ</a>
+                <% end %>  </li>
+          </ul>
+        </li>
+        <li><a href="#">お問い合わせ</a>
+        </li>
 
-</ul>
+            </ul>
 
-        </nav>
+              </nav>
 
-  </header>
+</header>
+
   <body>
 <div  class="topbox">
 <%= yield %>
 </div>
 </body>
+<footer>
+ <div class = "foot-box">
+ <div class="sns-share">
+ <%= social_share_button_tag("袴の試着なら", :url =>"https://infinite-ocean-88626.herokuapp.com/") %>
+ </div>
+ </div>
+</footer>
 </html>

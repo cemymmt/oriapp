@@ -126,7 +126,7 @@
 
 .pdp-selling-price {
     font-size: 15px;
-    margin: 0 10px 10px;
+    margin: 0 20px 10px;
     position: relative;
     text-align: right;
     font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
@@ -141,7 +141,7 @@
 }
 
 .pdp-action-container {
-    padding: 0 0 0 20px;
+    padding: 0 0 0 0;
     z-index: 0;
     width: 95%;
     display: -webkit-box;
@@ -272,9 +272,9 @@ display: inline;
 }
 
 .discount {
-    font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", ".HiraKakuInterface-W2";
     padding: 0 0 10px;
-    margin: 20px 20px;
+    margin: 20px 20px 0px 20px;
     margin-right: 0;
     font-size: 17px;
     font-weight: 400;
@@ -285,4 +285,38 @@ display: inline;
     color: #242424;
     font-size: 14px;
     font-weight: 300;
+}
+.eventdetail{
+    color: #242424;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 0 10px;
+    margin: 10px 20px;
+    margin-right: 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", ".HiraKakuInterface-W2";
+}
+.eventdetail p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.eventdetail li{
+    display: inline;
+    display: block;
+}
+.eventdetail ul{
+    list-syle: none;
+    display: inline;
+}
+.detailbox{
+  font-size: 10px;
+  margin: 3px 25px 3px 17px;
+}
+.map {
+    padding: 0 0 10px;
+    margin: 10px 0px;
+    margin-right: 0;
+}
+
+.set-include{
+    font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }

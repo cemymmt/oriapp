@@ -127,6 +127,7 @@ color: #000000;
 .explanation2 {
   color: #666;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+   margin: 20px auto 50px;
 }
 
 .box1 {
@@ -287,6 +288,26 @@ a {
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 
+.foot-box{
+max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Graphik Regular';
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    background-color: #2C393E;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    z-index: 101;
+    width: 100%;
+    height: 200px;
+}
+.sns-share{
+  text-align: center;
+  margin: 50px auto;
+}
 }
 
 
@@ -302,23 +323,24 @@ a {
 
 @media screen and (max-width: 500px) {
 
-.header {
-  height: 70px;
-}
-.body{
-  position:relative;
-}
+
+
 .title-box {
-    max-width: 100%;
+  max-width: 100%;
   height: 50px;
+  background-color: #2C393E;
 }
 .webtitle {
 text-decoration: none;
-position: absolute;
+position: relative;
+text-align: center;
 top: 8px;
-
+width: 70px;
   font-size: 15px;
   margin: 2px 5px 2px 5px;
+  color: #fff;
+  font-size: 15px;
+  font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 
 
@@ -402,6 +424,7 @@ color: #000000;
 .explanation2 {
   color: #666;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+
 }
 
 .box1 {
@@ -471,8 +494,8 @@ a {
   margin: 0 auto;
   overflow: hidden;
   padding: 5px;
-  height: 43px;
-  width: 227px;
+  height: 30px;
+  width: 140px;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 
@@ -486,9 +509,9 @@ a {
   border-radius: 3px;
   color: #999;
   float: left;
-  height: 20px;
+  height: 15px;
   padding: 10px;
-  width: 150px;
+  width: 130px;
   font-size: 15px;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }

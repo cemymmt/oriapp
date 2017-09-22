@@ -4,15 +4,15 @@ Rails.application.routes.draw do
 
   resources :unis, only: :index do
       resources :products, only: [:index, :show, :create, :destroy] do
-         member do
+         collection do
           post "add", to: "favorites#create"
           get 'search'
           get 'search_color'
+          get 'search_price'
          end
          resources :bookings, only: [:new, :create]
            collection do
              get 'top'
-             get 'search'
              get 'kimono_list'
            end
       end
@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get 'uni/search' => 'unis#search'
   get 'catalog' => 'products#kimono_list'
   delete 'comments' => 'products#destroy'
+  get 'photo' => 'products#form'
 
 
 end

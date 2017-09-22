@@ -1,0 +1,25 @@
+<h1 class="listtitle">検索結果</h1>
+     <ul class="productlist">
+     <% @products.each do |kimono| %>
+        <li>
+          <div class="kimonopic">
+            <% num = 1 %>
+            <% kimono.product_images.each do |pic| %>
+          <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>" class="eachpic">
+              <% if num == 1%>
+                <img class="eachpic" src="<%= pic.image %>">
+              <% end %>
+              <% num += 1 %>
+            <% end %>
+            </a>
+          </div>
+          <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>" class="kimonodetail">
+          <p class="kimonodetail">
+            <span>詳細はこちら</span>
+          </p>
+          </a>
+        </li>
+
+        <% end %>
+
+     </ul>

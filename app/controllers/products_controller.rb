@@ -40,11 +40,26 @@ class ProductsController < ApplicationController
  def search_color
   @uni = Uni.find(params[:uni_id])
   @products = Product.new
-  @products = Product.where()
+  @products = Product.where(color: params[:product])
 end
 
+  def search_price
+  @uni = Uni.find(params[:uni_id])
+  @products = Product.new
+  @products = Product.where(range: params[:price])
+  end
+
+  def form
+  Product_image.create(product_params)
+  @product_image = Product_image
+  end
 
   private
+
+  def product_params
+    params.require(:product).permit(:name, :price, :image, :image_cache, :remove_image)
+  end
+
   def comment_params
     params.require(:comment).permit(:text, :student_id, :product_id)
   end

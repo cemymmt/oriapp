@@ -32,6 +32,7 @@ top: 8px;
 }
 
 .introduction {
+width: 100vw;
 z-index: 1;
     background-image:
     url(http://free-photos-ls02.gatag.net/images/lgf01a201403022300.jpg);
@@ -346,7 +347,9 @@ width: 70px;
 
 .introduction{
 position: absolute;
-    height: 100px;
+width: 100vw;
+background-image:
+    url(http://free-photos-ls02.gatag.net/images/lgf01a201403022300.jpg);
 }
 
 .introduction

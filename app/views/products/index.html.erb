@@ -50,9 +50,11 @@
                 <div class="kimonopic">
                   <% num = 1 %>
                   <% kimono.product_images.each do |pic| %>
-                <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>" class="eachpic">
+
+                <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>">
                     <% if num == 1%>
-                      <img class="eachpic" src="<%= pic.image %>">
+                     <%= image_tag pic.photo %>
+
                     <% end %>
                     <% num += 1 %>
                   <% end %>

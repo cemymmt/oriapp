@@ -1,0 +1,17 @@
+<div class="photo_field">
+  <%= form_for(@product_image) do |f| %>
+
+    <% if @product_image.photo? %>
+      <%= image_tag @product_image.photo.url %>
+    </div>
+  <% end %>
+  <%= f.label :photo %><br>
+    <%= f.file_field :photo %>
+    商品番号を入力
+    <%= f.number_field :product_id %>
+
+    <%= f.submit "保存" %>
+  <% end %>
+</div>
+
+

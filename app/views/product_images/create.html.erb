@@ -1,0 +1,17 @@
+
+<div class="uploaded_box">
+      <div class="uploaded_company">
+        <p>企業名</p>
+        <%= @company.name %>
+      </div>
+
+      <div class="uploaded_product">
+        <p>商品名</p>
+        <%= @photo.product.title %>
+      </div>
+      <strong class="uploaded_image">
+      <p>保存した写真</p>
+        <%= image_tag @photo.photo.url %>
+      </strong>
+
+</div>

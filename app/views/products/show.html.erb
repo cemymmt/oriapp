@@ -21,19 +21,19 @@
                 <div class="thumbnails-vertical-container">
                    <button class="thumbnails-thumbnail-button">
                    <% if @product.product_images[2].present? %>
-                       <img class="thumbnails-thumbnail" src="<%= @product.product_images[2].image %>">
+                       <img class="thumbnails-thumbnail" src="<%= @product.product_images[2].photo %>">
                        <% end %>
                    </button>
                    <button class="thumbnails-thumbnail-button">
                    <% if @product.product_images[1].present? %>
-                       <img class="thumbnails-thumbnail" src="<%= @product.product_images[1].image %>">
+                       <img class="thumbnails-thumbnail" src="<%= @product.product_images[1].photo %>">
                        <% end %>
                    </button>
                 </div>
 
                 <div style="display: inline-block;">
                 <% if @product.product_images[0].present? %>
-                   <img class="thumbnails-selected-image" src="<%= @product.product_images[0].image %>">
+                   <img class="thumbnails-selected-image" src="<%= @product.product_images[0].photo %>">
                    <% end %>
                 </div>
           </div>
@@ -111,10 +111,11 @@
        <% end %>
 
              <ol>
-              <div id="comment_list"></div>
+
               <% @comments.each do |comment| %>
                 <%= render partial: "comments/comment", locals: {comment: comment} %>
               <% end %>
+              <div id="comment_list"></div>
             </ol>
         </div>
     </div>

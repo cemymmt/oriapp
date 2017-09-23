@@ -1,0 +1,9 @@
+<div class="field">
+  <%= form_for(@product_image, url: "") do |f| %>
+    <%= image_tag @product_image.photo.url if @product_image.present? %>
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+  <% end %>
+</div>
+

@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   resources :students, only: [:show]
   resources :favorites, only: [:create, :destroy]
+  resources :product_images, only: [:new, :create]
 
   get 'top' => 'unis#top'
   get 'uni/search' => 'unis#search'

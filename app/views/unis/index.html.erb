@@ -1,50 +1,10 @@
 
-<div class="unilistbody">
-<div class="mainbox1">
-<div class="whitebox"></div>
-
-</div>
-
-
-  <div class="scrollNav">
-    <ul class="outline">
-      <li>
-         <a href="outline01">あ行</a>
-      </li>
-      <li>
-         <a href="outline02">か行</a>
-      </li>
-      <li>
-         <a href="outline03">さ行</a>
-      </li>
-      <li>
-         <a href="outline04">た行</a>
-      </li>
-      <li>
-         <a href="outline05">な行</a>
-      </li>
-      <li>
-         <a href="outline06">は行</a>
-      </li>
-       <li>
-         <a href="outline07">ま行</a>
-      </li>
-       <li>
-         <a href="outline08">や行</a>
-      </li>
-       <li>
-         <a href="outline09">ら行</a>
-      </li>
-       <li>
-         <a href="outline10">わ行</a>
-      </li>
-    </ul>
-  </div>
-
-<% @universities.each do |uni| %>
-<div class="unilist">
-    <a href="/unis/<%= uni.id %>/products" class="uniname"><%= uni.name %></a>
-</div>
-<% end %>
-</div>
-</div>
+<div class="unilist_title">卒業する大学を選択</div>
+    <div class="unilistbody">
+        <% @universities.each do |uni| %>
+        <div class="unilist">
+            <a href="/unis/<%= uni.id %>/products" class="uniname"><%= uni.name %></a>
+        </div>
+          <p class="unilist_date">卒業式：<%= uni.graduation %></p>
+        <% end %>
+    </div>

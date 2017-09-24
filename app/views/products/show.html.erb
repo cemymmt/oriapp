@@ -1,8 +1,7 @@
 
-<div id="mountroot" style="margin-top: -2px;">
- <div data-reactroot class="application-base">
-  <div class="pdp-pdp-container">
-  <div>
+
+
+  <div class="product_main_container">
     <div class="breadcrumbs-container">
         <a href="/top" class="breadcrumbs-link">Home</a>
         <span class="breadcrumbs-separator">/</span>
@@ -15,9 +14,8 @@
         <a href="/products/:id" class="breadcrumbs-bold-link breadcrumbs-link">商品詳細</a>
     </div>
 
-    <div class="pdp_details">
+    <div class="production_details">
         <div class="pdp-image-container">
-          <div class="thumbnails-big">
                 <div class="thumbnails-vertical-container">
                    <button class="thumbnails-thumbnail-button">
                    <% if @product.product_images[2].present? %>
@@ -36,7 +34,6 @@
                    <img class="thumbnails-selected-image" src="<%= @product.product_images[0].photo %>">
                    <% end %>
                 </div>
-          </div>
         </div>
 
         <div class="pdp-description-container">
@@ -92,15 +89,14 @@
             </div>
       </div>
       </div>
-      <div class="pdp-productDescriptors">
-              商品説明
-            </div>
+<div class="pdp_bottom">
+      <div class="pdp-productDescriptors">商品説明</div>
             <div class="set-include">
             <%= @product.set %></div>
             <div class="product_explain">
             <%= @product.text %>
             </div>
-
+     <p class="comtitle">この商品に対するコメント</p>
        <%if student_signed_in? %>
             <%= form_for ([@uni, @comment]), remote: true, :url => {:action => 'create'} do |f| %>
               <%= f.hidden_field :student_id, value: current_student.id %>
@@ -110,18 +106,16 @@
             <% end %>
        <% end %>
 
-             <ol>
+             <ol class="comment_box">
+
 
               <% @comments.each do |comment| %>
                 <%= render partial: "comments/comment", locals: {comment: comment} %>
               <% end %>
               <div id="comment_list"></div>
             </ol>
-        </div>
-    </div>
-  </div>
-  </div>
 </div>
+    </div>
 
 
 <script type="text/javascript">

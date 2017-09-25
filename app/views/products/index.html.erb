@@ -26,20 +26,24 @@
 
 
       <div class="product_search_box">
-            <%= form_tag(search_uni_products_path(@uni.id), method: :get, class: "product_search_form") do %>
-                  <input type="text" id="search" name="keyword" placeholder="キーワードで検索" required>
-                  <input type="submit" value="検索" id="submit">
-            <% end %>
-
+            <li>
+                <%= form_tag(search_uni_products_path(@uni.id), method: :get, class: "product_search_form") do %>
+                      <input type="text" id="search" class="product_search_form" name="keyword" placeholder="キーワードで検索" required>
+                      <input type="submit" value="検索" id="submit">
+                <% end %>
+            </li>
+            <li>
             <%= form_tag(search_color_uni_products_path(@uni.id), method: :get, class: "product_search_form") do %>
-            <%= select_tag 'product', options_for_select([["赤・エンジ",1],["紺・青",2],["ピンク",3],["白・クリーム",4],["黒・グレー",5],["緑",7],["黄・オレンジ",8],["紫",9]]) %>
+            <%= select_tag 'product', options_for_select([["赤・エンジ",1],["紺・青",2],["ピンク",3],["白・クリーム",4],["黒・グレー",5],["緑",7],["黄・オレンジ",8],["紫",9]]), class: "product_search_form" %>
              <%= submit_tag("検索") %>
              <% end %>
-
+             </li>
+             <li>
              <%= form_tag(search_price_uni_products_path(@uni.id), method: :get, class: "product_search_form") do %>
-            <%= select_tag 'price', options_for_select([["〜30,000円",1],["30,000〜40,000円",2],["40,000円〜50,000円",3],["50,000円〜60,000円",4],["60,000円〜70,000円",5],["70,000円〜70",7]]) %>
+            <%= select_tag 'price', options_for_select([["〜30,000円",1],["30,000〜40,000円",2],["40,000円〜50,000円",3],["50,000円〜60,000円",4],["60,000円〜70,000円",5],["70,000円〜",6]]), class: "product_search_form" %>
              <%= submit_tag("検索") %>
              <% end %>
+             </li>
 
       </div>
 
@@ -50,19 +54,21 @@
                 <div class="kimonopic">
                   <% num = 1 %>
                   <% kimono.product_images.each do |pic| %>
-                <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>" class="eachpic">
+
+                <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>">
                     <% if num == 1%>
-                      <img class="eachpic" src="<%= pic.image %>">
+                     <%= image_tag pic.photo %>
+
                     <% end %>
                     <% num += 1 %>
                   <% end %>
                   </a>
                 </div>
-                <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>" class="kimonodetail">
+                <!-- <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>" class="kimonodetail">
                 <p class="kimonodetail">
                   <span>詳細はこちら</span>
                 </p>
-                </a>
+                </a> -->
               </li>
 
               <% end %>

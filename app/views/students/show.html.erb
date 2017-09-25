@@ -1,6 +1,6 @@
 <div class="uni-box">
-<div class="uni_name_line">
-マイページ
+<div class="mypage_line">
+MY PAGE
 </div>
 <br>
 名前  <%= @student.name %>
@@ -9,14 +9,14 @@
 お気にいりに追加した商品リスト
 <br>
 <% @student.products.each do |product| %>
-<tr>
+<li class="eachbox">
+    <div class="kimonopic">
 
-<td><%= product.title %></td>
-<br>
-<img class="bookingphoto" src="<%= product.product_images[0].image %>">
-</tr>
-<br>
+          <img src="<%= product.product_images[0].photo %>">
+
+
 <% end %>
 
 
-</div>
+    </div>
+</li>

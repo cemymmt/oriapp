@@ -1,4 +1,4 @@
-@media screen and (min-width: 961px) {
+@media screen and (min-width: 500px) {
 #menu{
 z-index: 2;
   list-style-type: none;
@@ -70,7 +70,9 @@ z-index: 2;
 }
 
 
-@media screen and (max-width: 769px) {
+
+
+@media screen and (max-width: 500px) {
 #menu{
 z-index: 2;
   list-style-type: none;
@@ -95,7 +97,7 @@ z-index: 2;
   margin: 0;
   padding: 12px 0 12px;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 5px;
   text-decoration: none;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }

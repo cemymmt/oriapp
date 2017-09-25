@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 20170925070550) do
     t.string   "time"
   end
 
-  create_table "eventdetails", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "eventdetails", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "uni_id"
     t.integer  "company_id"
     t.string   "period"
@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(version: 20170925070550) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "student_id"
-    t.integer  "product_id"
+    t.string   "Product_id"
   end
 
   create_table "product_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

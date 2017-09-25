@@ -3,26 +3,63 @@
 <h1>試着を予約</h1>
 <br>
 
+<table>
+ <tbody>
+   <tr>
+    <th scope="row" class>
+     お名前
+    </th>
+    <td>
+     <%= @student.name %>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row" class>
+     卒業する大学
+    </th>
+    <td>
+     <%= @uni.name %>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row" class>
+     試着する商品
+    </th>
+    <td>
+     <%= @product.title %>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row" class>
+     日時
+    </th>
+    <td>
+     <%= form_for ([@uni, @product, @booking]) do |f| %>
+     <%= f.collection_select :eventdate_id, @eventdates, :id, :time %>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row" class>
+     ご希望
+    </th>
+    <td>
+     <%= f.text_area :text, :placeholder => "例: 他の色を合わせてみたい！"%>
+    </td>
+  </tr>
+ </tbody>
+ </table>
 
-卒業する大学:    <%= @uni.name %>
-<br>
-名前:      <%= @student.name %>
-<br>
-試着する商品:     <%= @product.title %><br>
-
-<%= form_for ([@uni, @product, @booking]) do |f| %>
-<%= f.collection_select :eventdate_id, @eventdates, :id, :time %>
-<%= f.text_area :text, :placeholder => "例: 他の色も試してみたい！"%>
- <%= f.submit "予約する" %>
-<% end %>
-<br>
-<img class="bookingphoto" src="<%= @product.product_images[0].image %>">
-
-<br><br>
-
-
-
+ <img class="bookingphoto" src="<%= @product.product_images[0].photo %>">
 </div>
+<div class="subbox">
+   <%= f.submit "予約する", :class=> "booking_submit" %>
+</div>
+
+<% end %>
+
+
+
+
 </div>
 
 

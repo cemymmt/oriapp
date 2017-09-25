@@ -17,16 +17,16 @@
     <div class="production_details">
         <div class="pdp-image-container">
                 <div class="thumbnails-vertical-container">
-                   <button class="thumbnails-thumbnail-button">
+
                    <% if @product.product_images[2].present? %>
                        <img class="thumbnails-thumbnail" src="<%= @product.product_images[2].photo %>">
                        <% end %>
-                   </button>
-                   <button class="thumbnails-thumbnail-button">
+
+
                    <% if @product.product_images[1].present? %>
                        <img class="thumbnails-thumbnail" src="<%= @product.product_images[1].photo %>">
                        <% end %>
-                   </button>
+
                 </div>
 
                 <div style="display: inline-block;">
@@ -54,7 +54,7 @@
                     <p>① 大学の展示会場で試着</p>
                       <div class="detailbox">
                         <ul>
-                          <li><%= detail.period %></li>
+                          <li><%= simple_format(detail.period) %></li>
                           <li>時間：<%= detail.time %></li>
                           <li>会場：<%= detail.place %></li>
                         </ul>
@@ -90,7 +90,7 @@
       </div>
       </div>
 <div class="pdp_bottom">
-      <div class="pdp-productDescriptors">商品説明</div>
+      <div class="pdp-productDescriptors"><p>商品説明</p></div>
             <div class="set-include">
             <%= @product.set %></div>
             <div class="product_explain">

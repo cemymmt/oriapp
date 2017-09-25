@@ -1,6 +1,9 @@
+@media screen and (min-width: 500px) {
 .register-container{
   box-sizing: border-box;
-  background: linear-gradient(to bottom right,#9edede,#fcf0e2);
+  background-image: url("roman-kraft-84955.jpg");
+  background-position: center center;
+  background-size: cover;
   text-align: center;
     padding-top: 30px;
     position: relative;
@@ -92,3 +95,112 @@ background-color: #2bb6c1;
   ont-size: 13px;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+.register-container{
+  box-sizing: border-box;
+  background: url(http://tsubajin.co.jp/images/bg5.gif) repeat left top;
+  text-align: center;
+    padding-top: 30px;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.register-box{
+  background-color: #fff;
+  box-shadow: 0 2px 15px rgba(0,0,0,.1);
+  padding: 20px 10px;
+  max-width: 430px;
+      display: inline-block;
+    width: 300px;
+}
+
+.register-title{
+  font-size: 14px;
+    font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+}
+.register-register-container{
+  margin:0;
+}
+
+.register-input-container{
+     margin: 20px;
+    border: 1px solid #bfc0c6;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.label {
+  position: relative;
+  display: block;
+    color: #282c3f;
+    font-size: 15px;
+    padding-right: 40px;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    border-top: 1px solid #d5d6d9;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 14px;
+    font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+}
+
+.register-register-button-container{
+    padding: 10px 20px;
+    margin: 0;
+    border: 0;
+}
+
+fieldset {
+    border: 1px solid silver;
+    margin: 0 2px;
+    padding: .35em .625em .75em;
+    display: block;
+    -webkit-margin-start: 2px;
+    -webkit-margin-end: 2px;
+    -webkit-padding-before: 0.35em;
+    -webkit-padding-start: 0.75em;
+    -webkit-padding-end: 0.75em;
+    -webkit-padding-after: 0.625em;
+    min-width: -webkit-min-content;
+}
+
+.register-register-button{
+background-color: #2bb6c1;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 15px;
+    display: block;
+    width: 90%;
+    border: 0;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-family: Whitney;
+    font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+    margin: 10px auto 10px;
+}
+.more_link_box{
+  font-size: 13px;
+  font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+}
+
+.col-xs-6{
+  ont-size: 13px;
+  font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+}
+}
+

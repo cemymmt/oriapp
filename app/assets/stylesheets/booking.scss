@@ -1,8 +1,222 @@
+@media screen and (min-width: 500px) {
 .bookingpage {
   height: 500px;
 }
 
 .bookingbox {
-  margin: 100px 40px 0px;
+  margin: 50px auto 0px;
   text-align: center;
+  width: 900px;
 }
+.check_mypage{
+text-decoration: none;
+font-size: 20px;
+font-weight: 500;
+margin: 50px 0 70px 0;
+color:#4fb8af;
+font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+}
+
+.bookingbox h1{
+font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+font-size: 20px;
+    border-bottom: 1px solid #333;
+    line-height: 1.4;
+    text-align: center;
+
+}
+.shsshare{
+  margin: 70px 0 0 0 ;font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+}
+
+.bookingbox p{
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+font-size: 18px;
+margin: 0 0 50px 0;
+}
+.bookingphoto{
+  width: 25%;
+}
+
+table{
+fint-family:"游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+  width: 580px;
+  height: 308.33px;
+  margin: 0 0 0 20px;
+  border-collapse: collapse;
+  padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    float: left;
+    font-size: 18px;
+    line-height: 45px;
+    }
+table textarea{
+  width: 300px;
+}
+
+tr {
+padding-right: 30px;
+    width: 35%;
+    border-style: none;
+    order-top-style: none;
+    border-bottom: 2px solid #ddd;
+    padding: 15px;
+    vertical-align: top;
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+    font-weight: 500;
+    border: 1px solid #CCC;
+    vertical-align: top;
+    text-align: left;
+}
+
+th{
+  margin: 0 50px 0 50px;
+  width: 200px;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+  }
+
+.booking_submit{
+background: #4fb8af;
+    color: #FFF;
+    padding: 0;
+    width: 300px;
+    height: 50px;
+    border: none;
+    display: block;
+    margin: 30px auto;
+    cursor: pointer;
+}
+
+.subbox{
+  text-align: center;
+  width: 400px;
+  margin: 0 auto;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+.bookingpage {
+  height: 100%;
+}
+
+.bookingbox {
+  margin: 50px 0 50px 0;
+  text-align: center;
+  width: 350px;
+}
+
+.bookingbox h1{
+font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+font-size: 20px;
+    border-bottom: 1px solid #333;
+    line-height: 1.4;
+    text-align: center;
+
+}
+.bookingphoto{
+  width: 300px;
+  margin:10px auto;
+}
+
+table{
+fint-family:"游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+  width: 330px;
+  height: 308.33px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    font-size: 18px;
+}
+table textarea{
+  width: 150px;
+}
+
+tr {
+padding-right: 30px;
+    width: 130px;
+    border-style: none;
+    order-top-style: none;
+    border-bottom: 2px solid #ddd;
+    padding: 0px;
+    vertical-align: top;
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+    font-weight: 500;
+    border: 1px solid #CCC;
+    vertical-align: top;
+    text-align: left;
+    line-height: 44px;
+}
+
+th{
+  margin: 0 50px 0 50px;
+  width: 170px;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+  }
+
+.booking_submit{
+background: #4fb8af;
+    color: #FFF;
+    padding: 0;
+    width: 300px;
+    height: 50px;
+    border: none;
+    display: block;
+    margin: 30px auto;
+    cursor: pointer;
+}
+
+.subbox{
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+}
+.check_mypage{
+text-decoration: none;
+font-size: 20px;
+font-weight: 500;
+margin: 50px 0 70px 0;
+color:#4fb8af;
+font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+}
+.shsshare{
+  margin: 70px 0 0 0 ;font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+}
+.bookingbox p{
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+font-size: 18px;
+margin: 0 0 50px 0;
+}
+}
+
+
+
+
+
+

@@ -3,7 +3,6 @@ $(document).on('turbolinks:load', function() {
   $('#inc_search').on('keyup', searchUsers);
   $('.label').on('click', '.user-search-add', function() {
   $this = $(this);
-    console.log($this);
     chooseuni($this);
     });
 
@@ -50,7 +49,6 @@ function searchUsers() {
     dataType: 'json'
   })
   .done(function(uni) {
-    console.log(uni);
     var insertHTML = '';
 
     uni.forEach(function(uni){
@@ -70,20 +68,16 @@ function searchUsers() {
 }
 
 function chooseuni($this) {
-  console.log($this);
     var uniid = $this.data('uni-id');
     var uniname = $this.data('uni-name');
-    console.log(uniid);
-    console.log(uniname);
+
 
     insertHTML = buildAddUserHTML(uniid, uniname);
-    console.log(insertHTML);
     $('.user-search-result').hide();
     $('#inc_search').val(uniname);
 
     var buildinput =
       '<input value="' + uniid + '", name="student[uni_id]" type="hidden" />';
-      console.log(buildinput);
     $('#buildinput').append(buildinput);
 
 }

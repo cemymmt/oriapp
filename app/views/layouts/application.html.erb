@@ -20,38 +20,78 @@
           <% end %>
     </div>
 
-          <nav>
-                  <ul id="menu">
-        <li><a href="/top">HOME</a>
+<div class="original_menu">
+   <span class="cls"></span>
+   <span>
+      <nav class="main-nav" role="navigation">
+        <ul id="menu" class="submenu">
+        <li><a href="/top" title="home">HOME</a>
         </li>
-        <li><a href="#">ABOUT</a>
+        <li><a href="#" title="about">ABOUT</a>
         </li>
-        <li><a href="/unis">大学一覧</a>
+        <li><a href="/unis" title="unilist">大学一覧</a>
         </li>
-        <li><a href="">アカウント</a>
+        <li><a href="" title="account">アカウント</a>
           <ul>
-            <li><a href="/students/sign_up">新規登録</a></li>
+            <li><a href="/students/sign_up" title="new">新規登録</a></li>
             <li><%if student_signed_in? %>
                    <%= link_to  "ログアウト",destroy_student_session_path, method: :delete, class: "a" %>
                 <% else %>
-                  <a href="/students/sign_in">ログイン</a>
+                  <a href="/students/sign_in" title="login">ログイン</a>
                 <% end %>
             </li>
             <%if student_signed_in? %>
-                   <li><a href="/students/<%= current_student.id %>">マイページ</a>
+                   <li><a href="/students/<%= current_student.id %>" title="mypage">マイページ</a>
                 <% end %>  </li>
           </ul>
         </li>
-        <li><a href="#">お問い合わせ</a>
+        <li><a href="#" title="contact">お問い合わせ</a>
         </li>
 
-            </ul>
-
-              </nav>
+      </ul>
+    </nav>
+    </span>
+    <span class="cls"></span>
+  </div>
 
 </header>
 
 <body>
+
+    <div class = iphone_header>
+    <a href="/top" class="webtitle">Hakama-Book</a>
+          <%= form_tag('/unis/search', method: :get, class: "form-wrapper-top") do %>
+                     <input type="text" id="search" name="keyword" placeholder="大学名を入力" required>
+                    <input type="submit" value="検索" id="submit">
+          <% end %>
+    </div>
+
+<div class="open">
+   <span class="cls"></span>
+   <span>
+      <nav class="main-nav" role="navigation">
+        <ul id="menu" class="submenu">
+        <li><a href="/top" title="home">HOME</a>
+        </li>
+        <li><a href="/unis" title="unilist">大学一覧</a>
+        </li>
+        <li><a href="/students/sign_up" title="new">新規登録</a></li>
+        <li><%if student_signed_in? %>
+                   <%= link_to  "ログアウト",destroy_student_session_path, method: :delete, class: "a" %>
+                <% else %>
+                  <a href="/students/sign_in" title="login">ログイン</a>
+                <% end %>
+            </li>
+            <%if student_signed_in? %>
+        <li><a href="/students/<%= current_student.id %>" title="mypage">マイページ</a> <% end %>  </li>
+        </li>
+
+      </ul>
+    </nav>
+    </span>
+    <span class="cls"></span>
+  </div>
+
 <%= yield %>
 </body>
 

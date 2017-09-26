@@ -7,11 +7,9 @@
         <span class="breadcrumbs-separator">/</span>
          <a href="/unis" class="breadcrumbs-link">大学検索</a>
         <span class="breadcrumbs-separator">/</span>
-        <a href="/unis/<%= @uni.id %>" class="breadcrumbs-link"><%= @uni.name %></a>
-        <span class="breadcrumbs-separator">/</span>
-        <a href="/unis/<%= @uni.id %>" class="breadcrumbs-link">商品一覧</a>
+        <a href="/unis/<%= @uni.id %>/products" class="breadcrumbs-link"><%= @uni.name %>の商品一覧</a>
         <span class="breadcrumbs-separator">>>></span>
-        <a href="/products/:id" class="breadcrumbs-bold-link breadcrumbs-link">商品詳細</a>
+        <a href="/unis/<%= @uni.id %>/products/<%= @product.id %>" class="breadcrumbs-bold-link breadcrumbs-link">商品詳細</a>
     </div>
 
     <div class="production_details">
@@ -48,7 +46,7 @@
 
 
           <div class="eventdetail">
-            この商品を試着するには<br>
+            この商品を試着するには...<br>
               <% @eventdetail.each do |detail| %>
                    <% if detail.present? %>
                     <p>① 大学の展示会場で試着</p>

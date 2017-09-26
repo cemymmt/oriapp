@@ -1,6 +1,11 @@
 @media screen and (min-width: 500px) {
 
-
+.open{
+ display: none;
+}
+.iphone_header{
+  display: none;
+}
 
 footer {
     background-color: #2C393E;
@@ -25,6 +30,8 @@ height: 100%;
     font-style: normal;
     font-stretch: normal;
     background-color: #2C393E;
+    font-family: 'Vidaloka', serif;
+    color: #666;
   overflow: hidden;
   position: relative;
   top: 0;
@@ -37,16 +44,21 @@ height: 100%;
   position: relative;
   text-align: center;
 }
+
+
 .webtitle {
 text-decoration: none;
 position: absolute;
 top: 8px;
-  color: #fff;
+
   text-align: left;
   font-size: 15px;
   margin: 8px 10px 10px 30px;
-  font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+  font-family: 'Vidaloka', serif;
+color:#666;
+    text-shadow: -1px -1px #222, 1px 1px #aaa;
 }
+
 
 .introduction img{
 width: 100%;
@@ -341,7 +353,7 @@ footer {
 position: relative;
 height: 100%;
 }
-.title-box {
+.iphone_header {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -355,7 +367,10 @@ height: 100%;
   top: 0;
   z-index: 101;
   width: 100%;
-  height: 50px;
+  height: 61px;
+}
+ header{
+display: none;
 }
 
 .row{
@@ -376,7 +391,9 @@ top: 8px;
 .introduction img{
 position: relative;
 top: 0;
-width: 100%;
+width: 200%;
+margin-left: -48%;
+margin-top: -10%;
 z-index: 1;
 object-fit: cover;
 
@@ -398,8 +415,8 @@ object-fit: cover;
     position: absolute;
     margin: 0 auto;
     z-index: 999;
-    height: 85px;
-    top: 70%;
+    height: 200px;
+    top: 60%;
     width: 100%;
     background: rgba(0,0,0,.5);
     transform: translateY(-30%);
@@ -407,10 +424,10 @@ object-fit: cover;
 
 .introduction
 .overlay h1{
-    margin: 15px 0px auto;
+    margin: 34px 0px auto;
     color: #fff;
     text-align: center;
-    font-size: 10px;
+    font-size: 15px;
     font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 
@@ -427,8 +444,8 @@ object-fit: cover;
   display: block;
   text-align: center;
   text-decoration: none;
-  height:25px;
-  width: 120px;
+  height:50px;
+  width: 196px;
   line-height: 37px;
   text-align: center;
   color: #fff;
@@ -438,10 +455,10 @@ object-fit: cover;
   -o-transition: 0.3s;
   -ms-transition: 0.3s;
   transition: 0.3s;
-  margin: 5px auto;
+  margin: 23px auto;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
-  font-size: 8px;
-  line-height: 25px;
+  font-size: 21px;
+  line-height: 49px;
 }
 .button:hover {
   background: #2bb6c1;
@@ -457,26 +474,27 @@ object-fit: cover;
 .whatwedo{
 color: #000000;
   width: 100%;
-  margin: 20px 0  0  0;
+  margin: 35px 0  0  0;
     height: 50px;
     position: relative;
     text-align: center;
-    font-size: 18px;
+    font-size: 28px;
     font-weight: normal;
     font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
      line-height: 46px;
 }
 
 .explanation1 {
-  margin: 0 20px ;
-  font-size: 10px;
+  margin: 11px 20px ;
+  font-size: 18px;
   color: #666;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+  line-height: 25px;
 }
 
 .explanation2 {
  margin: 0 20px ;
-  font-size: 10px;
+  font-size: 18px;
   color: #666;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
    margin: 20px auto 50px;
@@ -544,13 +562,13 @@ a {
 
 .form-wrapper-top {
     position: absolute;
-    top: 8px;
-    right: 10px;
+    top: 13px;
+    left: 10px;
   margin: 0 auto;
   overflow: hidden;
   padding: 5px;
   height: 43px;
-  width: 130px;
+  width: 150px;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 
@@ -564,10 +582,10 @@ a {
   border-radius: 3px;
   color: #999;
   float: left;
-  height: 20px;
+  height: 25px;
   padding: 10px;
-  width: 82px;
-  font-size: 5px;
+  width: 99px;
+  font-size: 12px;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 
@@ -591,11 +609,6 @@ a {
 .form-wrapper-top #submit {
   background-color: #fff;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#31b2c3), to(#31b2c3));
-  background-image: -webkit-linear-gradient(top, #31b2c3, #0483a0);
-  background-image: -moz-linear-gradient(top, #31b2c3, #0483a0);
-  background-image: -ms-linear-gradient(top, #31b2c3, #0483a0);
-  background-image: -o-linear-gradient(top, #31b2c3, #0483a0);
-  background-image: linear-gradient(top, #31b2c3, #0483a0);
   border: 1px solid #00748f;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -607,10 +620,10 @@ a {
   cursor: pointer;
   height: 25px;
   float: right;
-  font-size: 10px;
+  font-size: 15px;
   padding: 0;
   text-transform: uppercase;
-  width: 30px;
+  width: 38px;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 

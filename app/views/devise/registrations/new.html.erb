@@ -21,6 +21,12 @@
             <div class="label"><%= f.label :name %><br />
             <%= f.text_field :name, placeholder: '名前を入力 (漢字)' %></div>
 
+            <div class="label"><%= f.label :uni_id %>
+            <br />
+            <%= f.text_field :uni_id, id: "inc_search",  autofocus: true, placeholder: '卒業する大学を入力してください' %>
+            <div class="user-search-result" id="user-search-result"></div>
+            <div id="buildinput"></div>
+
      </fieldset>
      <fieldset class="register-register-button-container">
                   <%= f.submit class: "register-register-button", value: "create account"%>

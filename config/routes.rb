@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'unis#top'
 
   resources :unis, only: :index do
+      get 'choose', on: :collection
       resources :products, only: [:index, :show, :create, :destroy] do
          collection do
           post "add", to: "favorites#create"

@@ -1,14 +1,27 @@
 @media screen and (min-width: 500px) {
+
+.uni_index{
+  margin: 0 auto;
+  width: 100%;
+  height: 2000px;
+  background: url(http://design-develop.net/wp-content/uploads/2014/11/herringbone4.jpg) repeat left top;
+  position: relative;
+  top: -60px;
+
+}
+
 .spaceofheader{
   height: 100px;
 }
 .unilistbody {
-  background: #fff;
+  background-color: rgba(255, 255, 255, 0.92);
   font: 12px Lucida sans, Arial, Helvetica, sans-serif;
   color: #333;
   text-align: center;
   font-weight: bold;
-  margin: 50px 80px;
+  margin: 10px 80px 0 80px;
+  position: relative;
+  top: 70px;
 }
 
 .mainbox1 {
@@ -164,11 +177,10 @@ li {
 
 .unilist {
  height: 50px;
-  margin: 5px 0px 0px 0px;
+  margin: 5px 50px 0px 50px;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
     display: flex;
     position: relative;
-    background: #fff;
     -webkit-box-orient: vertical;
     padding-bottom: 6px;
     border-top: 1px solid #E1E1E1;
@@ -176,7 +188,7 @@ li {
 }
 .unilist_date{
 text-align: right;
-margin: 0 30px 0 0;
+margin: 0 70px 0 0;
 font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 
 }
@@ -184,7 +196,7 @@ font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho"
 margin: 8px 0 0 10px;
  font-size: 20px;
  height: 15px;
- color: #7c7d7d;
+ color: #4d4c4b;
  -webkit-transition: color 0.3s ease-in-out 0s;
 }
 
@@ -195,8 +207,10 @@ margin: 8px 0 0 10px;
 .unilist_title{
   text-align: center;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
-  font-size: 16px;
-  margin: 50px auto;
+  font-size: 20px;
+  margin: 150px auto 0px;
+  padding: 50px;
+  color: #4d4c4b;
 }
 }
 
@@ -215,16 +229,28 @@ margin: 8px 0 0 10px;
 
 
 @media screen and (max-width: 500px) {
+.uni_index{
+  margin: 0 auto;
+  width: 100%;
+  height: 2000px;
+  background: url(http://design-develop.net/wp-content/uploads/2014/11/herringbone4.jpg) repeat left top;
+  position: relative;
+  top: -90px;
+
+}
+
 .spaceofheader{
   height: 100px;
 }
 .unilistbody {
-  background: #fff;
+  background-color: rgba(255, 255, 255, 0.92);
   font: 12px Lucida sans, Arial, Helvetica, sans-serif;
   color: #333;
   text-align: center;
   font-weight: bold;
-  margin: 30px 40px;
+  margin: 10px 30px 0 30px;
+  position: relative;
+  top: 30px;
 }
 
 .mainbox1 {
@@ -380,11 +406,10 @@ li {
 
 .unilist {
  height: 50px;
-  margin: 5px 0px 0px 0px;
+  margin: 5px 29px 0px 29px;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
     display: flex;
     position: relative;
-    background: #fff;
     -webkit-box-orient: vertical;
     padding-bottom: 6px;
     border-top: 1px solid #E1E1E1;
@@ -392,15 +417,15 @@ li {
 }
 .unilist_date{
 text-align: right;
-margin: 0 20px 0 0;
+margin: 0 38px 0 0;
 font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 
 }
 .uniname {
 margin: 8px 0 0 10px;
- font-size: 15px;
+ font-size: 17px;
  height: 15px;
- color: #7c7d7d;
+ color: #4d4c4b;
  -webkit-transition: color 0.3s ease-in-out 0s;
 }
 
@@ -409,10 +434,11 @@ margin: 8px 0 0 10px;
 }
 
 .unilist_title{
-  font-weight: 500;
   text-align: center;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
-  font-size: 18px;
-  margin: 50px auto;
+  font-size: 20px;
+  margin: 150px auto 0px;
+  padding: 30px;
+  color: #4d4c4b;
 }
 }

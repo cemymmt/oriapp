@@ -1,6 +1,8 @@
 
-<div class="unilist_title">卒業する大学を選択</div>
+<div class="uni_index">
+
     <div class="unilistbody">
+         <div class="unilist_title">卒業する大学を選択</div>
         <% @universities.each do |uni| %>
         <div class="unilist">
             <a href="/unis/<%= uni.id %>/products" class="uniname"><%= uni.name %></a>
@@ -8,3 +10,5 @@
           <p class="unilist_date">卒業式：<%= uni.graduation %></p>
         <% end %>
     </div>
+
+</div>

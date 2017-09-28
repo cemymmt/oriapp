@@ -11,8 +11,9 @@
 }
 
 .breadcrumbs-container {
+margin: 50px auto;
   display: block;
-  padding: 0 0 40px;
+  padding: 50px 0 40px;
   font-size: 13px;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
@@ -43,7 +44,7 @@
 .product_main_container {
     min-height: 910px;
     max-width: 980px;
-    margin: 85px auto;
+    margin: 100px auto;
     z-index: 8;
     position: relative;
     min-height: 700px;
@@ -107,7 +108,7 @@
     border-bottom: 1px dotted #d5d6d9;
     margin: 0 20px;
     padding: 0 0 10px;
-    width: 380px;
+    width: 100%;
     font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 
@@ -116,7 +117,7 @@
     border-bottom: 3px solid #eaeaec;
     color: #191a1a;
     margin: 10px 20px 0 0;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 800;
     margin: .67em 0;
     font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;

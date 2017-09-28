@@ -1,14 +1,11 @@
 
-<div class="uniresultbody">
-<h2 class="unilist uniname">検索結果</h2>
 
-<% @unis.each do |uni| %>
-<li>
-<a class="unilist uniname" href="/unis/<%= uni.id %>">
-<div>
-<%= uni.name %>
-</div>
-</a>
-</li>
-<% end %>
-</div>
+<div class="unilist_title">検索結果（卒業する大学を選択）</div>
+    <div class="unilistbody">
+        <% @unis.each do |uni| %>
+        <div class="unilist">
+            <a href="/unis/<%= uni.id %>/products" class="uniname"><%= uni.name %></a>
+        </div>
+          <p class="unilist_date">卒業式：<%= uni.graduation %></p>
+        <% end %>
+    </div>

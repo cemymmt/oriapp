@@ -1,0 +1,41 @@
+
+.my_tab-menu {
+  width: 80%;
+  margin-left: 60px;
+   background: url(http://www.abraham.co.jp/common/images/bodybg.gif) repeat left top;
+  margin: 0 auto;
+
+  ul { /* .tab-menuの中のulに対する記述 */
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  li { /* .tab-menuの中のli */
+    display: inline-block;
+    width: 250px;
+    height: 41px;
+    padding: 10px 10px 5px;
+    cursor: pointer;
+    background-color: #1dada1;
+    border-top-right-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+
+    &.selected {/* .tab-menuの中のliの内、.selectedが与えられているものに対する記述 */
+      background-color: #fff;
+      color: #1dada1;
+    }
+  }
+}
+
+.my_contents {
+  background-color: #fff;
+  height: 100%;
+  padding: 20px;
+
+  .right { /* .contentsの中の.rightに対する記述 */
+    display: none; /* 最初、右のコンテンツは非表示にする */
+  }
+}

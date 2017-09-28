@@ -27,6 +27,7 @@ class ProductsController < ApplicationController
 
  def index
     @products = Product.all
+    @eventdetail = Eventdetail.all
  end
 
  def search

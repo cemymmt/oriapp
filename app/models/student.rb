@@ -7,4 +7,5 @@ class Student < ApplicationRecord
   has_many :comments
   has_many :favorites
   has_many :products, through: :favorites
+  belongs_to :uni
 end

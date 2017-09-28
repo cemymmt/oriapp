@@ -1,25 +1,45 @@
-<h1 class="listtitle">検索結果</h1>
-     <ul class="productlist">
-     <% @products.each do |kimono| %>
-        <li>
-          <div class="kimonopic">
-            <% num = 1 %>
-            <% kimono.product_images.each do |pic| %>
-          <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>" class="eachpic">
-              <% if num == 1%>
-                <img class="eachpic" src="<%= pic.image %>">
+<div id="Contents">
+  <div class="inner">
+  <section class="colSect" id="Collection">
+   <a href="/top" class="breadcrumbs-link">Home</a>
+              <span class="breadcrumbs-separator">/</span>
+              <a href="/unis" class="breadcrumbs-link">大学検索</a>
+              <span class="breadcrumbs-separator">/</span>
+              <a href="/unis/<%= @uni.id %>/products" class="breadcrumbs-link"><%= @uni.name %>で予約できる商品一覧</a>
+              <span class="breadcrumbs-separator">>>></span>検索結果
+            </div>
+
+            <div class="uni-box">
+            <div class="uni_name_line">
+            検索結果
+            </div>
+            </div>
+
+
+<ul class="product_list_wrapper">
+           <% @products.each do |kimono| %>
+              <li class="eachbox">
+                <div class="kimonopic">
+                  <% num = 1 %>
+                  <% kimono.product_images.each do |pic| %>
+
+                <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>">
+                    <% if num == 1%>
+                     <%= image_tag pic.photo %>
+
+                    <% end %>
+                    <% num += 1 %>
+                  <% end %>
+                  </a>
+                </div>
+              </li>
+
               <% end %>
-              <% num += 1 %>
-            <% end %>
-            </a>
-          </div>
-          <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>" class="kimonodetail">
-          <p class="kimonodetail">
-            <span>詳細はこちら</span>
-          </p>
-          </a>
-        </li>
 
-        <% end %>
+           </ul>
 
-     </ul>
+
+ </section>
+  </div>
+</div>
+

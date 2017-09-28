@@ -1,4 +1,12 @@
 @media screen and (min-width: 500px) {
+
+.original_menu{
+  position: fixed;
+    top: 50px;
+    left: 0;
+    z-index: 700;
+    width: 100%;
+}
 #menu{
 z-index: 2;
   list-style-type: none;
@@ -72,13 +80,18 @@ z-index: 2;
 
 
 
+
+
+
+
+
 @media screen and (max-width: 500px) {
 
 
 
 .open{
   z-index: 999;
-  position: absolute;
+  position: fixed;
   top: 1px;
   right: 20px;
   width: 50px;
@@ -104,7 +117,7 @@ z-index: 2;
         transition: all 0.4s ease;
         &:nth-child(1){
             margin-top: 10px;
-            z-index: 9;
+            z-index: 1000;
         }
         &:nth-child(2){
             margin-top: 25px;
@@ -116,7 +129,7 @@ z-index: 2;
 }
 
 .submenu{
-       z-index: 800;
+       z-index: 1000;
       transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         height: 0;
         width: 0;
@@ -125,11 +138,11 @@ z-index: 2;
         position: absolute;
         background-color: rgba(0, 0, 0, 0.54);
         border-radius: 50%;
-        z-index: 18;
+        z-index: 1000;
         overflow: hidden;
         li{
             display: block;
-            z-index: 999;
+            z-index: 1000;
             float: right;
             clear: both;
             height: auto;
@@ -160,7 +173,7 @@ z-index: 2;
                 width: 100%;
                 display: block;
                 float: left;
-                z-index: 999;
+                z-index: 1000;
                 line-height: 45px;
                 text-decoration: none;
 
@@ -178,7 +191,7 @@ z-index: 2;
             overflow: visible;
         }
         span:nth-child(1), span:nth-child(3){
-            z-index: 100;
+            z-index: 1000;
             transform: rotate(45deg);
         }
         span:nth-child(1){

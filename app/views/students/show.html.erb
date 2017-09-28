@@ -1,22 +1,37 @@
+<div id="Contents">
 <div class="uni-box">
 <div class="mypage_line">
 MY PAGE
 </div>
 <br>
 名前  <%= @student.name %>
+大学 <%= @student.uni.name %>
+卒業式日程 <%= @student.uni.graduation %>
 <br>
-<br>
-お気にいりに追加した商品リスト
-<br>
-<% @student.products.each do |product| %>
-<li class="eachbox">
-    <div class="kimonopic">
 
-          <img src="<%= product.product_images[0].photo %>">
+試着を予約した商品
+<% @student.bookings.each do |booking| %>
+                <ul class="my_fav">
+                  <div class="kimonopic">
 
+                   <img src="<%= booking.product.product_images[0].photo %>">
+                   </div>
+                   </ul>
 
-<% end %>
+              <% end %>
+
+お気にいり登録商品
+ <% @student.products.each do |product| %>
+        <ul class="my_fav">
+          <div class="kimonopic">
+           <img src="<%= product.product_images[0].photo %>">
+           </div>
+           </ul>
+      <% end %>
+
 
 
     </div>
-</li>
+  </div>
+</div>
+</div>

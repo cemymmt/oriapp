@@ -1,5 +1,6 @@
 
 <div id="Contents">
+<div class="product_index">
   <div class="inner">
   <section class="colSect" id="Collection">
 
@@ -65,21 +66,17 @@
                 <div class="kimono_details">
                     <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>">
                      <p><%= kimono.price %>円</p>
-                      <% @eventdetail.where(@eventdetail.company.id :kimono.company.id).each do |detail| %>
-                   <% if detail.present? %>
-                    <p>大学の展示会場でご試着できます！</p>
-                  <% else %>
-                    <p><%= @product.company.name %>店舗でご試着できます！</p>
-                      </div>
-                  <% end %>
-               <% end %>
+                     <%= kimono.title %>
+
+
                     </a>
                 </div>
               </li>
 
-              <% end %>
+         <% end %>
 
            </ul>
   </section>
+  </div>
   </div>
 </div>

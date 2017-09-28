@@ -1,13 +1,17 @@
 <div id="Contents">
+<div class="product_index">
+
 <div class="uni-box">
-<div class="mypage_line">
-MY PAGE
-</div>
-<br>
-名前  <%= @student.name %>
+            <div class="uni_name_line">
+            MY PAGE
+            </div>
+            <div  class="uni-info">
+            名前  <%= @student.name %>
 大学 <%= @student.uni.name %>
 卒業式日程 <%= @student.uni.graduation %>
-<br>
+            </div>
+            </div>
+
 
 試着を予約した商品
 <% @student.bookings.each do |booking| %>

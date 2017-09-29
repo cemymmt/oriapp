@@ -97,7 +97,7 @@ left: 0;
 .intro_box{
   position: relative;
     top: 95px;
-    height: 700px;
+    height: 400px;
     z-index: 20;
     background-size: cover;
     background-position: center center;
@@ -109,9 +109,7 @@ left: 0;
     margin: 0 auto;
     z-index: 999;
     height: 200px;
-    top: 60%;
     width: 100%;
-    background: rgba(0,0,0,.5);
 }
 
 .introduction
@@ -496,7 +494,6 @@ object-fit: cover;
     height: 200px;
     top: 60%;
     width: 100%;
-    background: rgba(0,0,0,.5);
     transform: translateY(-30%);
 }
 

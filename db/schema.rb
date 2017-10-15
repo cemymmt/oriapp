@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170925070550) do
 
-  create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "text",         limit: 65535
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20170925070550) do
     t.integer  "student_id"
   end
 
-  create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "product_id"
     t.integer  "student_id"
     t.text     "text",       limit: 65535
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20170925070550) do
     t.datetime "updated_at",               null: false
   end
 
-  create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "website"
     t.string   "email"
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20170925070550) do
     t.float    "longitude",  limit: 24
   end
 
-  create_table "discounts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "discounts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "company_id"
     t.integer  "university_id"
     t.text     "text",          limit: 65535
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20170925070550) do
     t.datetime "updated_at",                  null: false
   end
 
-  create_table "eventdates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "eventdates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "text",       limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
@@ -71,14 +71,15 @@ ActiveRecord::Schema.define(version: 20170925070550) do
     t.string   "time"
   end
 
-  create_table "favorites", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "favorites", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "product_id_id", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "student_id"
-    t.string   "Product_id"
+    t.index ["product_id_id"], name: "index_favorites_on_product_id_id", using: :btree
   end
 
-  create_table "product_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "product_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "product_id"
     t.string   "image"
     t.datetime "created_at", null: false
@@ -86,7 +87,7 @@ ActiveRecord::Schema.define(version: 20170925070550) do
     t.string   "photo"
   end
 
-  create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.integer  "price"
     t.integer  "company_id"
@@ -101,7 +102,7 @@ ActiveRecord::Schema.define(version: 20170925070550) do
     t.integer  "range"
   end
 
-  create_table "sample_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "sample_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "product_id"
     t.string   "image"
     t.text     "text",       limit: 65535
@@ -109,7 +110,7 @@ ActiveRecord::Schema.define(version: 20170925070550) do
     t.datetime "updated_at",               null: false
   end
 
-  create_table "students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -128,7 +129,7 @@ ActiveRecord::Schema.define(version: 20170925070550) do
     t.index ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true, using: :btree
   end
 
-  create_table "unis", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "unis", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.integer  "phone"
     t.string   "website"

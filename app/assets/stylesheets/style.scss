@@ -118,7 +118,12 @@ left: 0;
     color: #fff;
     text-align: center;
     font-size: 18px;
-    font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+}
+.introduction
+.overlay h1 p{
+  font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 
 .introduction
@@ -206,10 +211,11 @@ color: #000000;
     height: 50px;
     position: relative;
     font-size: 38px;
-    font-weight: normal;
+    font-weight: bold;
     font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
     margin: 30px auto;
     z-index: 600;
+
 }
 
 .explanation1 {
@@ -217,6 +223,7 @@ color: #000000;
   font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
    z-index: 600;
   font-size: 20px;
+  font-weight: bold;
 }
 
 .explanation2 {
@@ -225,6 +232,7 @@ color: #000000;
    margin: 20px auto 50px;
     z-index: 600;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .box1 {

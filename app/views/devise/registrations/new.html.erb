@@ -13,17 +13,17 @@
             <%= f.email_field :email, autofocus: true, placeholder: 'メールアドレスを入力' %></div>
 
             <div class="label"><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
-              <%= f.password_field :password, autocomplete: "off", placeholder: 'パスワードを入力(6文字)' %></div>
+              <%= f.password_field :password, autocomplete: "off", placeholder: 'パスワードを入力(6文字以上)' %></div>
 
             <div class="label"><%= f.label :password_confirmation %><br />
               <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'パスワードを入力（確認）' %></div>
 
             <div class="label"><%= f.label :name %><br />
-            <%= f.text_field :name, placeholder: '名前を入力 (漢字)' %></div>
+            <%= f.text_field :name, placeholder: '名前をフルネームで入力' %></div>
 
             <div class="label"><%= f.label :uni_id %>
             <br />
-            <%= f.text_field :uni_id, id: "inc_search",  autofocus: true, placeholder: '卒業する大学を入力してください' %>
+            <%= f.text_field :uni_id, id: "inc_search",  autofocus: true, placeholder: '卒業する大学を入力してください' , :required => true %>
             <div class="user-search-result" id="user-search-result"></div>
             <div id="buildinput"></div>
 

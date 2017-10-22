@@ -1,13 +1,13 @@
 @media screen and (min-width: 500px) {
 .register-container{
   box-sizing: border-box;
-  background-image: url("roman-kraft-84955.jpg");
+
   background-position: center center;
   background-size: cover;
   text-align: center;
-    padding-top: 30px;
+    padding-top: 195px;
     position: relative;
-    padding-bottom: 40px;
+    padding-bottom: 190px;
 }
 
 .register-box{
@@ -50,6 +50,13 @@
     font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro","游明朝","YuMincho","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
 }
 
+.register-input-container
+.label input {
+  font-family: inherit;
+    font-weight: inherit;
+    width: 250px;
+    text-align: center;
+}
 .register-register-button-container{
     padding: 10px 20px;
     margin: 0;

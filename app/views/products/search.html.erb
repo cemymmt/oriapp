@@ -1,6 +1,11 @@
+
 <div id="Contents">
+<div class="product_index">
   <div class="inner">
   <section class="colSect" id="Collection">
+
+
+
    <a href="/top" class="breadcrumbs-link">Home</a>
               <span class="breadcrumbs-separator">/</span>
               <a href="/unis" class="breadcrumbs-link">大学検索</a>
@@ -32,6 +37,14 @@
                   <% end %>
                   </a>
                 </div>
+                <div class="kimono_details">
+                    <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>">
+                     <p><%= kimono.price %>円</p>
+                     <%= kimono.title %>
+
+
+                    </a>
+                </div>
                 <!-- <a href="/unis/<%= @uni.id %>/products/<%= kimono.id %>" class="kimonodetail">
                 <p class="kimonodetail">
                   <span>詳細はこちら</span>
@@ -44,7 +57,10 @@
            </ul>
 
 
- </section>
+
+
+
+  </section>
+  </div>
   </div>
 </div>
-

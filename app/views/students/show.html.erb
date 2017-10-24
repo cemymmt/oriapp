@@ -13,23 +13,38 @@
             </div>
 
 
-試着を予約した商品
+<div class="mypagesub">試着を予約した商品</div>
 <% @student.bookings.each do |booking| %>
                 <ul class="my_fav">
                   <div class="kimonopic">
 
                    <img src="<%= booking.product.product_images[0].photo %>">
+                   <div class="kimono_details">
+                    
+                     <p><%= booking.product.price %>円</p>
+                     <%= booking.product.title %>
+                     
+
+
+                    
+                </div>
                    </div>
                    </ul>
 
               <% end %>
 
-お気にいり登録商品
+<div class="mypagesub">お気にいり登録商品</div>
  <% @student.products.each do |product| %>
         <ul class="my_fav">
           <div class="kimonopic">
            <img src="<%= product.product_images[0].photo %>">
            </div>
+   <p><%= product.price %>円</p>
+                     <%= product.title %><br>
+                     <a href="/unis/<%= @student.uni.id %>/products/<%= product.id %>/bookings/new"><button class="pdp-add-to-bag pdp-button"><span>試着を予約</span></button>
+                   </a>
+
+
            </ul>
       <% end %>
 
